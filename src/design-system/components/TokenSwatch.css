@@ -1,0 +1,52 @@
+.token-swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--spacing-4);
+}
+
+.token-swatch {
+  overflow: hidden;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-default);
+}
+
+.token-swatch__preview {
+  height: 72px;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.token-swatch__meta {
+  padding: var(--spacing-3) var(--spacing-4);
+}
+
+.token-swatch__name {
+  margin: 0 0 4px;
+  font-family: var(--font-geist);
+  font-size: var(--text-body-small-size);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.token-swatch__value {
+  margin: 0 0 6px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-secondary);
+}
+
+.token-swatch__var {
+  display: block;
+  margin: 0 0 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-brand-primary);
+}
+
+.token-swatch__usage {
+  margin: 0;
+  font-family: var(--font-geist);
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+}

@@ -1,0 +1,38 @@
+.pw-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: var(--radius-tag);
+  font-family: var(--font-family-ui);
+  font-size: var(--text-tag-size);
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pw-tag--adventure {
+  background: var(--color-tag-adventure-bg);
+  color: var(--color-tag-adventure-fg);
+}
+
+.pw-tag--nature {
+  background: var(--color-tag-nature-bg);
+  color: var(--color-tag-nature-fg);
+}
+
+.pw-tag--hiking {
+  background: var(--color-tag-hiking-bg);
+  color: var(--color-tag-hiking-fg);
+}
+
+.pw-tag--neutral {
+  background: var(--color-surface-muted);
+  color: var(--color-text-body-secondary);
+}
+
+.pw-tag--brand {
+  background: var(--color-brand-green-subtle);
+  color: var(--color-primary);
+}

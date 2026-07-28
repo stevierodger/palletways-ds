@@ -1,0 +1,45 @@
+/**
+ * PolySans Trial — brand typeface (Figma: "PolySans Trial")
+ *
+ * Three cuts share one CSS family; the browser selects the file by font-weight:
+ *   600–700 → Median  (headings, buttons)
+ *   400     → Neutral (body copy)
+ *   300     → Slim    (tags, captions)
+ *   500     → no dedicated cut; resolves to Neutral (400) per CSS font matching
+ *
+ * Drop converted files into public/fonts/ — see public/fonts/README.md.
+ * Until files are present, the stack falls back to Geist Sans (loaded via @fontsource).
+ */
+
+@font-face {
+  font-family: "PolySans Trial";
+  src:
+    url("/fonts/PolySansTrial-Median.woff2") format("woff2"),
+    url("/fonts/PolySansTrial-Median.woff") format("woff"),
+    url("/fonts/PolySansTrial-Median.otf") format("opentype");
+  font-weight: 600 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PolySans Trial";
+  src:
+    url("/fonts/PolySansTrial-Neutral.woff2") format("woff2"),
+    url("/fonts/PolySansTrial-Neutral.woff") format("woff"),
+    url("/fonts/PolySansTrial-Neutral.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PolySans Trial";
+  src:
+    url("/fonts/PolySansTrial-Slim.woff2") format("woff2"),
+    url("/fonts/PolySansTrial-Slim.woff") format("woff"),
+    url("/fonts/PolySansTrial-Slim.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

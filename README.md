@@ -1,0 +1,131 @@
+# Palletways
+
+Vite + React + TypeScript project for the **Palletways** design system and components, sourced from [Palletways v1.2 Figma](https://www.figma.com/design/o92QFaFLrva3a3JJ0YS5Qp/Palletways-v1.2?node-id=80-154).
+
+## Design system website
+
+Interactive documentation site (Carbon / Wise inspired) with sidebar navigation, live component previews, token tables, and code examples.
+
+### What it does
+
+- Documents foundations: color, typography (incl. font weights), spacing (base, component, section), radius, shadows, breakpoints
+- Documents components: Button, Input, Tag, Tracker
+- Uses real token values extracted from Figma MCP (`get_design_context` on component nodes)
+- Hash-based routing — share links like `/#/colors` or `/#/button`
+
+### Files affected
+
+| Path | Role |
+|------|------|
+| `src/design-system/` | Doc site app, layout, pages, doc components |
+| `src/design-system/DesignSystemApp.tsx` | Router + page registry |
+| `src/design-system/layout/` | `DocLayout`, `DocPage` (sidebar + content shell); `doc-table--type-scale` fixes equal breakpoint column widths on typography tables |
+| `src/design-system/components/` | `TokenSwatch`, `ColorRamp`, `SpacingScale`, `ComponentPreview`, `CodeBlock`, `PropTable`, `DoDont` |
+| `src/design-system/pages/` | Foundation + component documentation pages |
+| `src/styles/tokens.css` | CSS custom properties (colors, type, spacing) |
+| `src/styles/fonts.css` | PolySans Trial `@font-face` declarations |
+| `public/fonts/` | Drop licensed font files here (see README) |
+| `src/tokens/index.ts` | JS/TS token exports |
+| `src/components/Button/` | Primary / secondary / ghost button |
+| `src/components/Input/` | Text field with label + error |
+| `src/components/Tag/` | Semantic tag chips |
+| `src/components/Tracker/` | Quote funnel step indicator |
+| `src/App.tsx` | Renders design system site |
+
+### CSS / design tokens
+
+Defined in `src/styles/tokens.css` and mirrored in `src/tokens/index.ts`:
+
+| Category | Key variables | Figma source |
+|----------|---------------|--------------|
+| Color ramps | `--color-slate-*`, `--color-brand-blue-*`, `--color-brand-green-*` | Palletways v1.2 Primitives collection |
+| Brand | `--color-brand-primary` (#225595), `--color-brand-green` (#8cc63f) | Button, shadows pages |
+| Text | `--color-primary`, `--color-secondary`, `--color-text-body-secondary` | Field, tracker nodes |
+| Spacing | `--spacing-1` … `--spacing-20`, `--spacing-comp-*`, `--spacing-section-*` | Primitives + Semantics (components audit canvas) |
+| Radius | `--radius-xs` (4px), `--radius-md` (12px), `--radius-pill` (999px) | Buttons, inputs, tracker |
+| Shadows | `--shadow-elevation-1` … `--shadow-elevation-5` | Node 140:464 |
+| Type | `--text-display-1-size`, `--text-h1-size` … `--text-body-caption-size`, `--font-family-*`, `--font-weight-slim` … `--font-weight-bold` | Display H1 derived 1.25× H1; Type Scale node 291:1008 |
+
+Typography uses **PolySans Trial** in Figma (Median / Neutral / Slim cuts). **Geist Sans** is the development fallback until font files are added — see [Fonts](#fonts) below.
+
+### Fonts
+
+Brand typeface: **PolySans Trial** (Figma family name). Three cuts map to one CSS family via `font-weight`:
+
+| Cut | Weight | Files |
+|-----|--------|-------|
+| Median | 600–700 | `PolySansTrial-Median.woff2` |
+| Neutral | 400 | `PolySansTrial-Neutral.woff2` |
+| Slim | 300 | `PolySansTrial-Slim.woff2` |
+
+Weight **500** has no PolySans cut — the browser resolves to Neutral (400). Documented on `/#/typography` under **Font weights**.
+
+**Quick start**
+
+1. Copy your licensed font files into `public/fonts/` using the names above (OTF/TTF also work — see README).
+2. Prefer woff2; convert with [Transfonter](https://transfonter.org/) or `fonttools` if needed.
+3. Run `npm run dev` → open `/#/typography` → DevTools Network should show font files loading (200).
+4. Confirm **Rendered fonts** in Computed styles shows PolySans Trial, not Geist Sans.
+
+Step-by-step details: [`public/fonts/README.md`](public/fonts/README.md).  
+`@font-face` rules: `src/styles/fonts.css`. Token variables: `src/styles/tokens.css`.
+
+Ensure your organisation holds a valid PolySans license before deploying font files to production.
+
+### Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173). Navigate via the sidebar or hash routes:
+
+- `/#/` — Overview
+- `/#/colors` — Color tokens and primitive ramps (slate, brand blue, brand green)
+- `/#/typography` — Type scale and font weights (300, 400, 500, 700)
+- `/#/spacing` — Base scale, component padding, and section spacing (`--spacing-section-*`)
+- `/#/button` — Button component
+
+### Build & deploy
+
+```bash
+npm run build   # → dist/
+npm run preview # serve production build
+```
+
+Static Vite output — deploy `dist/` to any static host (Vercel, Netlify, S3). No environment variables required.
+
+### Color ramps (added)
+
+Primitive scales from Figma **Palletways v1.2 → Primitives** collection:
+
+| Ramp | CSS prefix | Steps in code | Figma variable pattern |
+|------|------------|---------------|------------------------|
+| Slate | `--color-slate-*` | 000, 100–300, 500–900 | `slate/{step}` |
+| Brand blue | `--color-brand-blue-*` | 50, 300, 500, 700–900 | `brand/blue/{step}` |
+| Brand green | `--color-brand-green-*` | 50, 300–500, 700–800 | `brand/green/{step}` |
+
+**Files:** `src/styles/tokens.css`, `src/tokens/index.ts` (`colorRamps`), `src/design-system/components/ColorRamp.tsx`, `src/design-system/pages/ColorsPage.tsx`.
+
+**Text color tokens (merged):** Ink and Ink Muted are consolidated into **Primary** and **Secondary**. Canonical CSS variables are `--color-primary` (#0f172a, slate/900) and `--color-secondary` (#475569, slate/600). Legacy aliases `--color-ink`, `--color-ink-muted`, `--color-text-primary`, and `--color-text-secondary` remain for backwards compatibility.
+
+**Surface tokens (merged):** Slate 0 (`slate/000`, #f3f4f6) is consolidated into **Surface Subtle**. Canonical CSS variable is `--color-surface-subtle` (#f3f4f6). Legacy alias `--color-slate-000` remains for backwards compatibility.
+
+**Not extracted via MCP** (variables exist in Figma but no bound node returned hex): `slate/50`, `slate/400`, `brand/blue/100`, `brand/blue/200`, `brand/blue/400`, `brand/blue/600`, `brand/green/100`, `brand/green/200`, `brand/green/600`, `brand/green/900`. Re-run extraction with a color palette frame selected in Figma to resolve these.
+
+### Section spacing (added)
+
+Semantic tokens from Figma **Palletways v1.2 → Semantics** collection (components audit canvas, node `80:154`):
+
+| Token | CSS variable | Value | Figma alias |
+|-------|--------------|-------|-------------|
+| section-sm | `--spacing-section-sm` | 32px (2rem) | `spacing/section-sm` → `spacing/8` |
+| section-md | `--spacing-section-md` | 64px (4rem) | `spacing/section-md` → `spacing/16` |
+| section-lg | `--spacing-section-lg` | 120px (7.5rem) | `spacing/section-lg` → `spacing/30` |
+
+**Files:** `src/styles/tokens.css`, `src/tokens/index.ts` (`sectionSpacing`), `src/design-system/pages/SpacingPage.tsx`, `src/design-system/pages/OverviewPage.tsx` (Foundations at a glance).
+
+Use section spacing for vertical rhythm between page sections and marketing blocks; use `--spacing-comp-*` for internal component padding. No breakpoint-specific section spacing modes found in Figma — values are single defaults.
+
+**Not in base primitive scale:** `spacing/30` (120px) is referenced by `section-lg` but not exported as `--spacing-30` in the base scale (minimize scope).
