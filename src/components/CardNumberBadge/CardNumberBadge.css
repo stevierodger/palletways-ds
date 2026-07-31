@@ -1,0 +1,56 @@
+.pw-card-number-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+  min-height: 47px;
+  padding: var(--spacing-comp-y-md, 12px) var(--spacing-comp-x-md, 16px);
+  border-radius: var(--corner-radius-xs, 4px);
+  background: #00da62;
+  color: #000;
+  font-family: var(--font-polysans);
+  font-size: 20px;
+  font-weight: var(--font-weight-median, 600);
+  line-height: 36px;
+}
+
+.pw-card-number-badge__mark {
+  display: block;
+  width: 63px;
+  height: 21px;
+  object-fit: contain;
+}
+
+.pw-card-number-badge__mark--compact {
+  width: 21px;
+  height: 21px;
+}
+
+.pw-card-number-badge__divider {
+  display: block;
+  width: 2px;
+  height: 23px;
+  background: #00a74b;
+}
+
+.pw-card-number-badge__network {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 3.8px 5.1px;
+  border-radius: 2.5px;
+  background: #252525;
+}
+
+.pw-card-number-badge__network img {
+  display: block;
+  width: 21px;
+  height: 13px;
+  object-fit: contain;
+}
+
+.pw-card-number-badge__number {
+  min-width: 48px;
+}

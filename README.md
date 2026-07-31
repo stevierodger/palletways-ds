@@ -9,7 +9,7 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 ### What it does
 
 - Documents foundations: color, typography (incl. font weights), spacing (base, component, section), radius, shadows, breakpoints
-- Documents components: ActionAdd, Badge, Button, Checkbox, Chip, Counter, Input, Switch, Tag, Toggle, Tracker
+- Documents components: ActionAdd, Badge, Breadcrumbs, Button, CalendarDate, CardNumberBadge, Checkbox, Chip, Counter, Input, Switch, Tag, Toggle, Tracker, Trustpilot
 - Uses real token values extracted from Figma MCP (`get_design_context` on component nodes)
 - Hash-based routing — share links like `/#/colors` or `/#/button`
 
@@ -38,6 +38,10 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 | `src/components/Counter/` | Quantity stepper; Code Connect (`action.counter`) |
 | `src/components/Chip/` | Status chips; Code Connect (`Chip`) |
 | `src/components/Badge/` | Uppercase category badge; Code Connect (`Badge`) |
+| `src/components/Breadcrumbs/` | Text breadcrumbs; Code Connect (`Breadcrumbs`) |
+| `src/components/CalendarDate/` | Calendar day cell; Code Connect (`calendar-date`) |
+| `src/components/CardNumberBadge/` | Link payment badge; Code Connect (`card-number-badge`) |
+| `src/components/Trustpilot/` | Trustpilot star tile; Code Connect (`trustpilot`) |
 | `src/components/Tag/` | Semantic tag chips; Code Connect via Figma `label` |
 | `src/components/Tracker/` | Quote funnel step indicator; Code Connect (`tracker`) |
 | `src/App.tsx` | Renders design system site |
@@ -116,6 +120,17 @@ Checkbox icons: Figma `Interface / Checkbox_Unchecked` (`297:1909`) and `Checkbo
 | `Badge` (`30:41`) | `Badge` | `src/components/Badge/badge.figma.ts` |
 
 Plus/minus icons: `Edit / Add_Plus` (`2003:2092`), `Edit / Remove_Minus` (`2003:2093`). Chip tones use Figma hex (no WEB tokens on that set); leading glyphs from Figma `Icons` (`dot` / `alert` / `check` / `cross`).
+
+#### CalendarDate / Breadcrumbs / CardNumberBadge / Trustpilot
+
+| Figma | Code | Template |
+|-------|------|----------|
+| `calendar-date` (`2059:4796`) | `CalendarDate` | `src/components/CalendarDate/calendar-date.figma.ts` |
+| `Breadcrumbs` (`194:2939`) | `Breadcrumbs` | `src/components/Breadcrumbs/breadcrumbs.figma.ts` |
+| `card-number-badge` (`2132:10067`) | `CardNumberBadge` | `src/components/CardNumberBadge/card-number-badge.figma.ts` |
+| `trustpilot` (`194:2143`) | `Trustpilot` | `src/components/Trustpilot/trustpilot.figma.ts` |
+
+CalendarDate tones: `default` / `empty` / `today` / `collection` (green, left-round) / `travel` (mid range) / `delivery` (blue, right-round). Hover variants are CSS. Trustpilot star path from Figma VECTOR export.
 
 #### App token layer (`tokens.css`)
 

@@ -10,7 +10,10 @@ import { ShadowsPage } from "./pages/ShadowsPage";
 import { BreakpointsPage } from "./pages/BreakpointsPage";
 import { ActionAddPage } from "./pages/components/ActionAddPage";
 import { BadgePage } from "./pages/components/BadgePage";
+import { BreadcrumbsPage } from "./pages/components/BreadcrumbsPage";
 import { ButtonPage } from "./pages/components/ButtonPage";
+import { CalendarDatePage } from "./pages/components/CalendarDatePage";
+import { CardNumberBadgePage } from "./pages/components/CardNumberBadgePage";
 import { CheckboxPage } from "./pages/components/CheckboxPage";
 import { ChipPage } from "./pages/components/ChipPage";
 import { CounterPage } from "./pages/components/CounterPage";
@@ -19,6 +22,7 @@ import { SwitchPage } from "./pages/components/SwitchPage";
 import { TagPage } from "./pages/components/TagPage";
 import { TogglePage } from "./pages/components/TogglePage";
 import { TrackerPage } from "./pages/components/TrackerPage";
+import { TrustpilotPage } from "./pages/components/TrustpilotPage";
 import "./design-system.css";
 
 const NAV: NavItem[] = [
@@ -41,7 +45,10 @@ const NAV: NavItem[] = [
     children: [
       { id: "action-add", label: "ActionAdd" },
       { id: "badge", label: "Badge" },
+      { id: "breadcrumbs", label: "Breadcrumbs" },
       { id: "button", label: "Button" },
+      { id: "calendar-date", label: "CalendarDate" },
+      { id: "card-number-badge", label: "CardNumberBadge" },
       { id: "checkbox", label: "Checkbox" },
       { id: "chip", label: "Chip" },
       { id: "counter", label: "Counter" },
@@ -50,6 +57,7 @@ const NAV: NavItem[] = [
       { id: "tag", label: "Tag" },
       { id: "toggle", label: "Toggle" },
       { id: "tracker", label: "Tracker" },
+      { id: "trustpilot", label: "Trustpilot" },
     ],
   },
 ];
@@ -64,7 +72,10 @@ const PAGES: Record<string, ReactNode> = {
   breakpoints: <BreakpointsPage />,
   "action-add": <ActionAddPage />,
   badge: <BadgePage />,
+  breadcrumbs: <BreadcrumbsPage />,
   button: <ButtonPage />,
+  "calendar-date": <CalendarDatePage />,
+  "card-number-badge": <CardNumberBadgePage />,
   checkbox: <CheckboxPage />,
   chip: <ChipPage />,
   counter: <CounterPage />,
@@ -73,6 +84,7 @@ const PAGES: Record<string, ReactNode> = {
   tag: <TagPage />,
   toggle: <TogglePage />,
   tracker: <TrackerPage />,
+  trustpilot: <TrustpilotPage />,
 };
 
 function pageFromHash(): string {

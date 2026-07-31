@@ -143,8 +143,9 @@ export function OverviewPage() {
             <tr>
               <td>Components</td>
               <td>
-                ActionAdd, Badge, Button, Checkbox, Chip, Counter, Input, Switch,
-                Tag, Toggle, Tracker
+                ActionAdd, Badge, Breadcrumbs, Button, CalendarDate,
+                CardNumberBadge, Checkbox, Chip, Counter, Input, Switch, Tag,
+                Toggle, Tracker, Trustpilot
               </td>
             </tr>
           </tbody>
