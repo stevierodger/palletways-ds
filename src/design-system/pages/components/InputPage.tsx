@@ -11,11 +11,11 @@ export function InputPage() {
   return (
     <DocPage
       title="Input"
-      description="Text field with label, focus, and error states. Based on Figma field=static (228:422)."
+      description="Text field with label, focus, and error states. Code Connect: Figma `input-field` (2280:8235) and legacy `field` (210:319)."
     >
       <DocSection title="Default">
         <ComponentPreview>
-          <Input label="Full name*" placeholder="Full name*" />
+          <Input label="First Name" placeholder="John Appleseed" />
         </ComponentPreview>
       </DocSection>
 
@@ -47,7 +47,7 @@ export function InputPage() {
         <CodeBlock
           code={`import { Input } from "./components/Input";
 
-<Input label="Full name*" placeholder="Full name*" />`}
+<Input label="First Name" placeholder="John Appleseed" />`}
         />
         <PropTable
           rows={[

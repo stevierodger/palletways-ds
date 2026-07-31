@@ -30,9 +30,9 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 | `src/components/Button/` | Primary / secondary / ghost button + Code Connect templates (`button-*.figma.ts`) |
 | `src/components/Icon/` | Arrow icons from Figma (SVG assets + React + nestable Code Connect) |
 | `figma.config.json` | Code Connect include/label/parser config |
-| `src/components/Input/` | Text field with label + error |
-| `src/components/Tag/` | Semantic tag chips |
-| `src/components/Tracker/` | Quote funnel step indicator |
+| `src/components/Input/` | Text field with label + error; Code Connect (`input-field`, `field`) |
+| `src/components/Tag/` | Semantic tag chips; Code Connect via Figma `label` |
+| `src/components/Tracker/` | Quote funnel step indicator; Code Connect (`tracker`) |
 | `src/App.tsx` | Renders design system site |
 
 ### CSS / design tokens
@@ -77,6 +77,17 @@ Ten Figma `Arrow /*` components → React + SVG in `src/components/Icon/`:
 `ChevronLeft`, `ChevronRight`, `CaretDown`, `CaretUp`, `CaretCircleRight`, `ArrowCircleDown`, `ArrowCircleUp`, `ArrowCircleLeft`, `ArrowCircleRight`, `ArrowsReload`
 
 Exported as clean 24×24 SVGs via Figma Plugin API (`exportAsync`), using `currentColor`. Code Connect templates are `nestable: true` so they render inside Button icon slots.
+
+#### Input / Tracker / Tag
+
+| Figma | Code | Template |
+|-------|------|----------|
+| `input-field` (`2280:8235`) | `Input` | `src/components/Input/input-field.figma.ts` |
+| `field` (`210:319`) | `Input` | `src/components/Input/field.figma.ts` (legacy) |
+| `tracker` (`2054:4704`) | `Tracker` | `src/components/Tracker/tracker.figma.ts` |
+| `label` (`2283:9436`) | `Tag` | `src/components/Tag/label.figma.ts` (no tone variants in Figma yet) |
+
+**Gaps:** `Input` has no leading/trailing icon props yet (Figma INSTANCE_SWAPs omitted). No dedicated Tag component set — tones live only in code.
 
 #### App token layer (`tokens.css`)
 
