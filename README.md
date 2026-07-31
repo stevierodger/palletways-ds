@@ -9,7 +9,7 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 ### What it does
 
 - Documents foundations: color, typography (incl. font weights), spacing (base, component, section), radius, shadows, breakpoints
-- Documents components: Button, Input, Tag, Tracker
+- Documents components: Button, Checkbox, Input, Switch, Tag, Toggle, Tracker
 - Uses real token values extracted from Figma MCP (`get_design_context` on component nodes)
 - Hash-based routing — share links like `/#/colors` or `/#/button`
 
@@ -31,6 +31,9 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 | `src/components/Icon/` | Arrow icons from Figma (SVG assets + React + nestable Code Connect) |
 | `figma.config.json` | Code Connect include/label/parser config |
 | `src/components/Input/` | Text field with label + error; Code Connect (`input-field`, `field`) |
+| `src/components/Checkbox/` | Labelled checkbox; Code Connect (`input.check-field`) |
+| `src/components/Switch/` | On/off pill switch; Code Connect (`input.switch`) |
+| `src/components/Toggle/` | Two-option segmented control; Code Connect (`input.toggle`) |
 | `src/components/Tag/` | Semantic tag chips; Code Connect via Figma `label` |
 | `src/components/Tracker/` | Quote funnel step indicator; Code Connect (`tracker`) |
 | `src/App.tsx` | Renders design system site |
@@ -88,6 +91,16 @@ Exported as clean 24×24 SVGs via Figma Plugin API (`exportAsync`), using `curre
 | `label` (`2283:9436`) | `Tag` | `src/components/Tag/label.figma.ts` (no tone variants in Figma yet) |
 
 **Gaps:** `Input` has no leading/trailing icon props yet (Figma INSTANCE_SWAPs omitted). No dedicated Tag component set — tones live only in code.
+
+#### Checkbox / Switch / Toggle
+
+| Figma | Code | Template |
+|-------|------|----------|
+| `input.check-field` (`2001:1712`) | `Checkbox` | `src/components/Checkbox/checkbox.figma.ts` |
+| `input.switch` (`2002:1749`) | `Switch` | `src/components/Switch/switch.figma.ts` |
+| `input.toggle` (`2002:1773`) | `Toggle` | `src/components/Toggle/toggle.figma.ts` |
+
+Checkbox icons: Figma `Interface / Checkbox_Unchecked` (`297:1909`) and `Checkbox_Check` (`297:1908`) → `CheckboxUnchecked` / `CheckboxChecked` at 20px. Switch track colour is the same for off/on (matches Figma). Toggle `Property 1=primary` → option1; `secondary` → option2.
 
 #### App token layer (`tokens.css`)
 

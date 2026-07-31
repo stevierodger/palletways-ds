@@ -9,8 +9,11 @@ import { RadiusPage } from "./pages/RadiusPage";
 import { ShadowsPage } from "./pages/ShadowsPage";
 import { BreakpointsPage } from "./pages/BreakpointsPage";
 import { ButtonPage } from "./pages/components/ButtonPage";
+import { CheckboxPage } from "./pages/components/CheckboxPage";
 import { InputPage } from "./pages/components/InputPage";
+import { SwitchPage } from "./pages/components/SwitchPage";
 import { TagPage } from "./pages/components/TagPage";
+import { TogglePage } from "./pages/components/TogglePage";
 import { TrackerPage } from "./pages/components/TrackerPage";
 import "./design-system.css";
 
@@ -33,8 +36,11 @@ const NAV: NavItem[] = [
     label: "Components",
     children: [
       { id: "button", label: "Button" },
+      { id: "checkbox", label: "Checkbox" },
       { id: "input", label: "Input" },
+      { id: "switch", label: "Switch" },
       { id: "tag", label: "Tag" },
+      { id: "toggle", label: "Toggle" },
       { id: "tracker", label: "Tracker" },
     ],
   },
@@ -49,8 +55,11 @@ const PAGES: Record<string, ReactNode> = {
   shadows: <ShadowsPage />,
   breakpoints: <BreakpointsPage />,
   button: <ButtonPage />,
+  checkbox: <CheckboxPage />,
   input: <InputPage />,
+  switch: <SwitchPage />,
   tag: <TagPage />,
+  toggle: <TogglePage />,
   tracker: <TrackerPage />,
 };
 

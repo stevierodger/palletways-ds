@@ -18,3 +18,7 @@ export { ArrowCircleRight } from "./ArrowCircleRight";
 export type { ArrowCircleRightProps } from "./ArrowCircleRight";
 export { ArrowsReload } from "./ArrowsReload";
 export type { ArrowsReloadProps } from "./ArrowsReload";
+export { CheckboxUnchecked } from "./CheckboxUnchecked";
+export type { CheckboxUncheckedProps } from "./CheckboxUnchecked";
+export { CheckboxChecked } from "./CheckboxChecked";
+export type { CheckboxCheckedProps } from "./CheckboxChecked";
