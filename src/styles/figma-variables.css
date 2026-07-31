@@ -1,0 +1,335 @@
+/**
+ * Palletways Figma variable catalogue
+ * Source: https://www.figma.com/design/o92QFaFLrva3a3JJ0YS5Qp/Palletways-v1.2
+ *
+ * Variable names match each Figma variable's WEB code syntax exactly.
+ * This sheet is the bridge for Code Connect — keep in sync with Figma.
+ *
+ * Collections: Primitives · Status · Typography · Semantics · Type Scale · Motion
+ *
+ * Notes:
+ * - FLOAT scale tokens are emitted as px (Figma stores unitless numbers).
+ * - Status Light = :root; Dark = [data-color-mode="dark"].
+ * - Typography / Type Scale modes: Desktop default; Tablet ≤1024px; Mobile ≤768px.
+ * - Motion tokens have no WEB code syntax in Figma yet — names below are proposed
+ *   from the Figma path (set WEB syntax in Figma to lock these).
+ * - Collision: typography/body-strong/* and typography/body-large/* both use
+ *   --typography-body-large-font-size / --typography-body-large-line-height.
+ * - Likely Figma alias bugs (verify in file):
+ *   - typography/heading-4/font-size Mobile → scale/05 (2px)
+ *   - typography/heading-5/font-size Tablet → scale/05 (2px)
+ *   - typography/heading-1/line-height Tablet → scale/15 (6px)
+ */
+
+:root {
+  /* ═══════════════════════════════════════════
+     Primitives — colors
+     ═══════════════════════════════════════════ */
+  /* brand/green/* */
+  --brand-green-50: #e8ffdd; /* brand/green/50 */
+  --brand-green-100: #c5ffa6; /* brand/green/100 */
+  --brand-green-200: #a4f377; /* brand/green/200 */
+  --brand-green-300: #8edb5f; /* brand/green/300 */
+  --brand-green-400: #75c144; /* brand/green/400 */
+  --brand-green-500: #59a420; /* brand/green/500 */
+  --brand-green-600: #428500; /* brand/green/600 */
+  --brand-green-700: #306400; /* brand/green/700 */
+  --brand-green-800: #1f4400; /* brand/green/800 */
+  --brand-green-900: #0e2600; /* brand/green/900 */
+  /* brand/blue/* */
+  --brand-blue-50: #f1f7ff; /* brand/blue/50 */
+  --brand-blue-100: #dfedff; /* brand/blue/100 */
+  --brand-blue-200: #c1dcff; /* brand/blue/200 */
+  --brand-blue-300: #9ac5ff; /* brand/blue/300 */
+  --brand-blue-400: #76acf2; /* brand/blue/400 */
+  --brand-blue-500: #5b90d4; /* brand/blue/500 */
+  --brand-blue-600: #4073b5; /* brand/blue/600 */
+  --brand-blue-700: #225595; /* brand/blue/700 */
+  --brand-blue-800: #003774; /* brand/blue/800 */
+  --brand-blue-900: #001e45; /* brand/blue/900 */
+  /* slate/* */
+  --slate-50: #f8fafc; /* slate/50 */
+  --slate-100: #f1f5f9; /* slate/100 */
+  --slate-200: #e2e8f0; /* slate/200 */
+  --slate-300: #cbd5e1; /* slate/300 */
+  --slate-400: #94a3b8; /* slate/400 */
+  --slate-500: #64748b; /* slate/500 */
+  --slate-600: #44536a; /* slate/600 */
+  --slate-700: #334155; /* slate/700 */
+  --slate-800: #1e293b; /* slate/800 */
+  --slate-900: #0f172a; /* slate/900 */
+  --slate-000: #f8f8f8; /* slate/000 */
+  --white: #ffffff; /* white */
+
+  /* ═══════════════════════════════════════════
+     Primitives — scale (spacing floats)
+     Figma: scale/{n} → WEB: --spacing-{n}
+     ═══════════════════════════════════════════ */
+  --spacing-0: 0px; /* scale/0 */
+  --spacing-1: 4px; /* scale/1 */
+  --spacing-2: 8px; /* scale/2 */
+  --spacing-3: 12px; /* scale/3 */
+  --spacing-4: 16px; /* scale/4 */
+  --spacing-5: 20px; /* scale/5 */
+  --spacing-6: 24px; /* scale/6 */
+  --spacing-7: 28px; /* scale/7 */
+  --spacing-8: 32px; /* scale/8 */
+  --spacing-9: 36px; /* scale/9 */
+  --spacing-10: 40px; /* scale/10 */
+  --spacing-12: 48px; /* scale/12 */
+  --spacing-14: 56px; /* scale/14 */
+  --spacing-15: 6px; /* scale/15 */
+  --spacing-16: 64px; /* scale/16 */
+  --spacing-18: 72px; /* scale/18 */
+  --spacing-20: 80px; /* scale/20 */
+  --spacing-23: 92px; /* scale/23 */
+  --spacing-25: 10px; /* scale/25 */
+  --spacing-26: 104px; /* scale/26 */
+  --spacing-29: 116px; /* scale/29 */
+  --spacing-30: 120px; /* scale/30 */
+  --spacing-32: 128px; /* scale/32 */
+  --spacing-35: 14px; /* scale/35 */
+  --spacing-45: 18px; /* scale/45 */
+  --spacing-55: 22px; /* scale/55 */
+  --spacing-05: 2px; /* scale/05 */
+  --spacing-rounded: 999px; /* scale/rounded */
+  --field-input: "field input"; /* field-input (STRING) */
+
+  /* ═══════════════════════════════════════════
+     Status — Light mode
+     ═══════════════════════════════════════════ */
+  --color-status-success-strong-default: #008602; /* status/color-status-success-strong-default */
+  --color-status-success-subtle-default: #f0fdf4; /* status/color-status-success-subtle-default */
+  --color-status-warning-strong-default: #8f6503; /* status/color-status-warning-strong-default */
+  --color-status-warning-subtle-default: #fff482; /* status/color-status-warning-subtle-default */
+  --color-status-error-strong-default: #cd000a; /* status/color-status-error-strong-default */
+  --color-status-error-subtle-default: #ffdbdb; /* status/color-status-error-subtle-default */
+  --color-status-info-strong-default: #005dd0; /* status/color-status-info-strong-default */
+  --color-status-info-subtle-default: #d8ecff; /* status/color-status-info-subtle-default */
+  --color-bg-blue-subtle-default: var(--brand-blue-100); /* brand/color-bg-blue-subtle-default → brand/blue/100 */
+  --color-bg-blue-lightest-default: var(--brand-blue-50); /* brand/color-bg-blue-lightest-default → brand/blue/50 */
+  --color-bg-blue-lighter-default: var(--brand-blue-100); /* brand/color-bg-blue-lighter-default → brand/blue/100 */
+  --color-bg-blue-light-default: var(--brand-blue-300); /* brand/color-bg-blue-light-default → brand/blue/300 */
+  --color-bg-blue-strong-default: var(--brand-blue-400); /* brand/color-bg-blue-strong-default → brand/blue/400 */
+  --color-bg-blue-medium-default: var(--brand-blue-500); /* brand/color-bg-blue-medium-default → brand/blue/500 */
+  --color-bg-blue-bold-default: var(--brand-blue-600); /* brand/color-bg-blue-bold-default → brand/blue/600 */
+  --color-bg-blue-bolder-default: var(--brand-blue-700); /* brand/color-bg-blue-bolder-default → brand/blue/700 */
+  --color-bg-blue-dark-default: var(--brand-blue-800); /* brand/color-bg-blue-dark-default → brand/blue/800 */
+  --color-bg-blue-darkest-default: var(--brand-blue-900); /* brand/color-bg-blue-darkest-default → brand/blue/900 */
+  --color-bg-green-subtle-default: var(--brand-green-100); /* brand/color-bg-green-subtle-default → brand/green/100 */
+  --color-bg-green-lightest-default: var(--brand-green-50); /* brand/color-bg-green-lightest-default → brand/green/50 */
+  --color-bg-green-light-default: var(--brand-green-300); /* brand/color-bg-green-light-default → brand/green/300 */
+  --color-bg-green-strong-default: var(--brand-green-400); /* brand/color-bg-green-strong-default → brand/green/400 */
+  --color-bg-green-bold-default: var(--brand-green-600); /* brand/color-bg-green-bold-default → brand/green/600 */
+  --color-bg-green-bolder-default: var(--brand-green-700); /* brand/color-bg-green-bolder-default → brand/green/700 */
+  --color-bg-green-dark-default: var(--brand-green-800); /* brand/color-bg-green-dark-default → brand/green/800 */
+
+  /* ═══════════════════════════════════════════
+     Typography — Desktop mode
+     ═══════════════════════════════════════════ */
+  --typography-display-font-size: var(--spacing-14); /* typography/display/font-size → scale/14 */
+  --typography-display-line-height: var(--spacing-18); /* typography/display/line-height → scale/18 */
+  --typography-heading-1-font-size: var(--spacing-12); /* typography/heading-1/font-size → scale/12 */
+  --typography-heading-1-line-height: var(--spacing-18); /* typography/heading-1/line-height → scale/18 */
+  --typography-heading-2-font-size: var(--spacing-9); /* typography/heading-2/font-size → scale/9 */
+  --typography-heading-2-line-height: var(--spacing-14); /* typography/heading-2/line-height → scale/14 */
+  --typography-heading-3-font-size: var(--spacing-8); /* typography/heading-3/font-size → scale/8 */
+  --typography-heading-3-line-height: var(--spacing-12); /* typography/heading-3/line-height → scale/12 */
+  --typography-heading-4-font-size: var(--spacing-7); /* typography/heading-4/font-size → scale/7 */
+  --typography-heading-4-line-height: var(--spacing-10); /* typography/heading-4/line-height → scale/10 */
+  --typography-heading-5-font-size: var(--spacing-6); /* typography/heading-5/font-size → scale/6 */
+  --typography-heading-5-line-height: var(--spacing-9); /* typography/heading-5/line-height → scale/9 */
+  --typography-body-large-font-size: var(--spacing-5); /* typography/body-large/font-size → scale/5 (also body-strong → scale/7 — WEB collision) */
+  --typography-body-large-line-height: var(--spacing-7); /* typography/body-large/line-height → scale/7 (also body-strong → scale/8 — WEB collision) */
+  --typography-body-font-size: var(--spacing-4); /* typography/body/font-size → scale/4 */
+  --typography-body-line-height: var(--spacing-6); /* typography/body/line-height → scale/6 */
+  --typography-body-small-font-size: var(--spacing-35); /* typography/body-small/font-size → scale/35 */
+  --typography-body-small-line-height: var(--spacing-45); /* typography/body-small/line-height → scale/45 */
+  --typography-caption-font-size: var(--spacing-3); /* typography/caption/font-size → scale/3 */
+  --typography-caption-line-height: var(--spacing-3); /* typography/caption/line-height → scale/3 */
+
+  /* ═══════════════════════════════════════════
+     Semantics
+     ═══════════════════════════════════════════ */
+  /* Button */
+  --button-color-bg-primary-default: var(--brand-blue-700); /* button/color-bg-primary-default */
+  --button-color-bg-primary-hover: var(--brand-blue-800); /* button/color-bg-primary-hover */
+  --button-color-bg-primary-active: var(--brand-blue-900); /* button/color-bg-primary-active */
+  --button-color-bg-primary-disabled: var(--slate-200); /* button/color-bg-primary-disabled */
+  --button-color-bg-subtle-default: var(--brand-blue-50); /* button/color-bg-subtle-default */
+  --button-color-bg-subtle-hover: var(--brand-blue-100); /* button/color-bg-subtle-hover */
+  --button-color-border-primary-default: var(--brand-blue-700); /* button/color-border-primary-default */
+  --button-color-bg-secondary-default: var(--slate-000); /* button/color-bg-secondary-default */
+  --button-color-bg-secondary-hover: var(--slate-100); /* button/color-bg-secondary-hover */
+  --button-color-bg-secondary-active: var(--slate-200); /* button/color-bg-secondary-active */
+  --button-color-bg-secondary-disabled: var(--slate-200); /* button/color-bg-secondary-disabled */
+  --button-color-border-secondary-default: var(--slate-700); /* button/color-border-secondary-default */
+  --text-color-text-body-primary-default: var(--slate-900); /* text/color-text-body-primary-default */
+  --text-color-text-body-secondary-default: var(--slate-600); /* text/color-text-body-secondary-default */
+  --text-color-text-body-example-default: var(--slate-500); /* text/color-text-body-example-default */
+  --text-color-text-body-primary-disabled: var(--slate-300); /* text/color-text-body-primary-disabled */
+  --text-color-text-inverse-primary-default: var(--white); /* text/color-text-inverse-primary-default */
+  --text-color-text-inverse-secondary-default: var(--slate-300); /* text/color-text-inverse-secondary-default */
+  --text-color-text-inverse-primary-disabled: var(--slate-500); /* text/color-text-inverse-primary-disabled */
+  --surface-color-bg-subtle-default: var(--white); /* surface/color-bg-subtle-default */
+  --surface-color-bg-natural-default: var(--slate-000); /* surface/color-bg-natural-default */
+  --surface-color-bg-bold-default: var(--slate-100); /* surface/color-bg-bold-default */
+  --surface-color-bg-subtle-hover: var(--slate-000); /* surface/color-bg-subtle-hover */
+  --surface-color-bg-natural-hover: var(--slate-50); /* surface/color-bg-natural-hover */
+  --surface-color-bg-bold-hover: var(--slate-200); /* surface/color-bg-bold-hover */
+  --surface-color-bg-inverse-subtle-default: var(--slate-900); /* surface/color-bg-inverse-subtle-default */
+  --surface-color-bg-inverse-natural-default: var(--slate-800); /* surface/color-bg-inverse-natural-default */
+  --surface-color-bg-inverse-bold-default: var(--slate-700); /* surface/color-bg-inverse-bold-default */
+  --surface-color-bg-inverse-subtle-hover: var(--slate-800); /* surface/color-bg-inverse-subtle-hover */
+  --surface-color-bg-inverse-natural-hover: var(--slate-700); /* surface/color-bg-inverse-natural-hover */
+  --surface-color-bg-inverse-bold-hover: var(--slate-600); /* surface/color-bg-inverse-bold-hover */
+  --surface-color-bg-primary-disabled: var(--slate-100); /* surface/color-bg-primary-disabled */
+  --border-color-border-subtle-default: var(--slate-200); /* border/color-border-subtle-default */
+  --border-color-border-natural-default: var(--slate-300); /* border/color-border-natural-default */
+  --border-color-border-bold-default: var(--slate-500); /* border/color-border-bold-default */
+  --border-color-border-focus: var(--brand-green-200); /* border/color-border-focus */
+  --icon-color-icon-primary-default: var(--slate-900); /* icon/color-icon-primary-default */
+  --icon-color-icon-secondary-default: var(--slate-600); /* icon/color-icon-secondary-default */
+  --icon-color-icon-primary-disabled: var(--slate-300); /* icon/color-icon-primary-disabled */
+  --icon-color-icon-inverse-primary-default: var(--white); /* icon/color-icon-inverse-primary-default */
+  --icon-color-icon-inverse-secondary-default: var(--slate-300); /* icon/color-icon-inverse-secondary-default */
+  --icon-color-icon-inverse-primary-disabled: var(--slate-500); /* icon/color-icon-inverse-primary-disabled */
+  --spacing-comp-00: var(--spacing-0); /* spacing/comp-00 */
+  --spacing-comp-x-xs: var(--spacing-1); /* spacing/comp-x-xs */
+  --spacing-comp-x-sm: var(--spacing-2); /* spacing/comp-x-sm */
+  --spacing-comp-x-md: var(--spacing-4); /* spacing/comp-x-md */
+  --spacing-comp-x-lg: var(--spacing-6); /* spacing/comp-x-lg */
+  --spacing-comp-y-xs: var(--spacing-1); /* spacing/comp-y-xs */
+  --spacing-comp-y-sm: var(--spacing-15); /* spacing/comp-y-sm */
+  --spacing-comp-y-md: var(--spacing-3); /* spacing/comp-y-md */
+  --spacing-comp-y-lg: var(--spacing-8); /* spacing/comp-y-lg */
+  --spacing-section-sm: var(--spacing-8); /* spacing/section-sm */
+  --spacing-section-md: var(--spacing-16); /* spacing/section-md */
+  --spacing-section-lg: var(--spacing-30); /* spacing/section-lg */
+  --corner-radius-00: var(--spacing-0); /* corner/radius-00 */
+  --corner-radius-xs: var(--spacing-1); /* corner/radius-xs */
+  --corner-radius-sm: var(--spacing-2); /* corner/radius-sm */
+  --corner-radius-md: var(--spacing-4); /* corner/radius-md */
+  --corner-radius-lg: var(--spacing-6); /* corner/radius-lg */
+  --corner-radius-rounded: var(--spacing-rounded); /* corner/radius-rounded */
+  --icon-size-icon-xs: var(--spacing-3); /* icon-size/icon-xs */
+  --icon-size-icon-sm: var(--spacing-4); /* icon-size/icon-sm */
+  --icon-size-icon-md: var(--spacing-5); /* icon-size/icon-md */
+  --icon-size-icon-lg: var(--spacing-6); /* icon-size/icon-lg */
+  --icon-size-icon-xl: var(--spacing-8); /* icon-size/icon-xl */
+
+  /* ═══════════════════════════════════════════
+     Type Scale — Desktop mode
+     ═══════════════════════════════════════════ */
+  --heading-h1: 55px; /* heading/h1 */
+  --heading-h2: 44px; /* heading/h2 */
+  --heading-h3: 35px; /* heading/h3 */
+  --heading-h4: 28px; /* heading/h4 */
+  --heading-h5: 22px; /* heading/h5 */
+  --heading-h6: 18px; /* heading/h6 */
+  --body-large: 18px; /* body/large */
+  --body-base: 16px; /* body/base */
+  --body-small: 14px; /* body/small */
+  --body-caption: 12px; /* body/caption */
+
+  /* ═══════════════════════════════════════════
+     Motion — proposed WEB names (not set in Figma yet)
+     ═══════════════════════════════════════════ */
+  --motion-easing-standard-x1: 0.4; /* motion/easing/standard/x1 */
+  --motion-easing-standard-y1: 1; /* motion/easing/standard/y1 */
+  --motion-easing-standard-x2: 0; /* motion/easing/standard/x2 */
+  --motion-easing-standard-y2: 1; /* motion/easing/standard/y2 */
+  --motion-easing-standard: cubic-bezier(var(--motion-easing-standard-x1), var(--motion-easing-standard-y1), var(--motion-easing-standard-x2), var(--motion-easing-standard-y2));
+  --motion-text-enter-heading-duration: 0.6s; /* motion/text-enter/heading/duration */
+  --motion-text-enter-heading-translate-y: 40px; /* motion/text-enter/heading/translate-y */
+  --motion-text-enter-heading-stagger: 0.12s; /* motion/text-enter/heading/stagger */
+  --motion-text-enter-subheading-duration: 0.45s; /* motion/text-enter/subheading/duration */
+  --motion-text-enter-subheading-translate-y: 24px; /* motion/text-enter/subheading/translate-y */
+  --motion-text-enter-subheading-stagger: 0.08s; /* motion/text-enter/subheading/stagger */
+  --motion-text-enter-detail-duration: 0.35s; /* motion/text-enter/detail/duration */
+  --motion-text-enter-detail-translate-y: 16px; /* motion/text-enter/detail/translate-y */
+  --motion-text-enter-detail-stagger: 0.06s; /* motion/text-enter/detail/stagger */
+}
+
+/* Status — Dark mode */
+[data-color-mode="dark"] {
+  --color-status-success-strong-default: #f0fdf4;
+  --color-status-success-subtle-default: #008602;
+  --color-status-warning-strong-default: #fff482;
+  --color-status-warning-subtle-default: #8f6503;
+  --color-status-error-strong-default: #ffdbdb;
+  --color-status-error-subtle-default: #cd000a;
+  --color-status-info-strong-default: #d8ecff;
+  --color-status-info-subtle-default: #005dd0;
+  --color-bg-blue-subtle-default: var(--brand-blue-400);
+  --color-bg-blue-lightest-default: var(--brand-blue-900);
+  --color-bg-blue-lighter-default: var(--brand-blue-800);
+  --color-bg-blue-light-default: var(--brand-blue-700);
+  --color-bg-blue-strong-default: var(--brand-blue-100);
+  --color-bg-blue-medium-default: var(--brand-blue-400);
+  --color-bg-blue-bold-default: var(--brand-blue-300);
+  --color-bg-blue-bolder-default: var(--brand-blue-200);
+  --color-bg-blue-dark-default: var(--brand-blue-100);
+  --color-bg-blue-darkest-default: var(--brand-blue-50);
+  --color-bg-green-subtle-default: var(--brand-green-400);
+  --color-bg-green-lightest-default: var(--brand-green-900);
+  --color-bg-green-light-default: var(--brand-green-700);
+  --color-bg-green-strong-default: var(--brand-green-100);
+  --color-bg-green-bold-default: var(--brand-green-300);
+  --color-bg-green-bolder-default: var(--brand-green-200);
+  --color-bg-green-dark-default: var(--brand-green-100);
+}
+
+/* Typography + Type Scale — Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  :root {
+    --typography-display-font-size: var(--spacing-12);
+    --typography-display-line-height: var(--spacing-14);
+    --typography-heading-1-font-size: var(--spacing-10);
+    --typography-heading-1-line-height: var(--spacing-15);
+    --typography-heading-2-font-size: var(--spacing-8);
+    --typography-heading-2-line-height: var(--spacing-12);
+    --typography-heading-3-font-size: var(--spacing-7);
+    --typography-heading-3-line-height: var(--spacing-10);
+    --typography-heading-4-font-size: var(--spacing-6);
+    --typography-heading-4-line-height: var(--spacing-9);
+    --typography-heading-5-font-size: var(--spacing-05);
+    --typography-heading-5-line-height: var(--spacing-8);
+    --typography-body-large-font-size: var(--spacing-5);
+    --typography-body-large-line-height: var(--spacing-7);
+    --heading-h1: 40px;
+    --heading-h2: 33px;
+    --heading-h3: 28px;
+    --heading-h4: 23px;
+    --heading-h5: 20px;
+    --heading-h6: 17px;
+    --body-large: 17px;
+  }
+}
+
+/* Typography + Type Scale — Mobile (≤768px) */
+@media (max-width: 768px) {
+  :root {
+    --typography-display-font-size: var(--spacing-10);
+    --typography-display-line-height: var(--spacing-12);
+    --typography-heading-1-font-size: var(--spacing-8);
+    --typography-heading-1-line-height: var(--spacing-12);
+    --typography-heading-2-font-size: var(--spacing-7);
+    --typography-heading-2-line-height: var(--spacing-10);
+    --typography-heading-3-font-size: var(--spacing-6);
+    --typography-heading-3-line-height: var(--spacing-8);
+    --typography-heading-4-font-size: var(--spacing-05);
+    --typography-heading-4-line-height: var(--spacing-7);
+    --typography-heading-5-font-size: var(--spacing-45);
+    --typography-heading-5-line-height: var(--spacing-7);
+    --typography-body-large-font-size: var(--spacing-5);
+    --typography-body-large-line-height: var(--spacing-7);
+    --heading-h1: 26px;
+    --heading-h2: 23px;
+    --heading-h3: 20px;
+    --heading-h4: 18px;
+    --heading-h5: 16px;
+    --heading-h6: 14px;
+    --body-large: 16px;
+  }
+}

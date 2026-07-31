@@ -1,4 +1,5 @@
 import { Button } from "../../../components/Button";
+import { ChevronLeft, ChevronRight } from "../../../components/Icon";
 import {
   CodeBlock,
   ComponentPreview,
@@ -33,6 +34,15 @@ export function ButtonPage() {
         </ComponentPreview>
       </DocSection>
 
+      <DocSection title="With icons">
+        <ComponentPreview title="Leading · Trailing (Figma chevrons)">
+          <Button variant="secondary" leadingIcon={<ChevronLeft size={24} />}>
+            Back
+          </Button>
+          <Button trailingIcon={<ChevronRight size={24} />}>Get a quote</Button>
+        </ComponentPreview>
+      </DocSection>
+
       <DocSection title="States">
         <ComponentPreview title="Loading & disabled">
           <Button loading>Loading…</Button>
@@ -58,8 +68,9 @@ export function ButtonPage() {
       <DocSection title="Code">
         <CodeBlock
           code={`import { Button } from "./components/Button";
+import { ChevronRight } from "./components/Icon";
 
-<Button variant="primary" size="md">
+<Button variant="primary" size="md" trailingIcon={<ChevronRight />}>
   Get a quote
 </Button>`}
         />
