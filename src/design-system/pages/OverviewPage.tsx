@@ -142,7 +142,10 @@ export function OverviewPage() {
             </tr>
             <tr>
               <td>Components</td>
-              <td>Button, Checkbox, Input, Switch, Tag, Toggle, Tracker</td>
+              <td>
+                ActionAdd, Badge, Button, Checkbox, Chip, Counter, Input, Switch,
+                Tag, Toggle, Tracker
+              </td>
             </tr>
           </tbody>
         </table>

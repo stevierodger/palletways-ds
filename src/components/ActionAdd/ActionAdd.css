@@ -1,0 +1,60 @@
+.pw-action-add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--button-lg-spacing-content-x, 24px);
+  box-sizing: border-box;
+  min-height: 44px;
+  margin: 0;
+  padding: var(--spacing-comp-y-sm, 6px) var(--spacing-comp-x-sm, 8px);
+  border: 1px solid var(--button-color-border-secondary-default, #334155);
+  border-radius: var(--button-lg-corner-radius, 8px);
+  background: var(--button-color-bg-secondary-default, #f8f8f8);
+  cursor: pointer;
+  color: var(--text-color-text-body-secondary-default, #44536a);
+  font-family: var(--font-polysans);
+  font-size: var(--typography-body-font-size, var(--text-body-base-size));
+  font-weight: var(--font-weight-median, 600);
+  line-height: var(--typography-body-line-height, var(--text-body-base-line));
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.pw-action-add__label {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.pw-action-add__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+/* Figma nests 24px glyph in a 20px clip slot (−2px offset) */
+.pw-action-add__icon .pw-icon {
+  width: 24px;
+  height: 24px;
+  margin: -2px;
+}
+
+.pw-action-add:hover:not(:disabled),
+.pw-action-add:focus-visible:not(:disabled) {
+  background: var(--button-color-bg-primary-default, #225595);
+  border-color: var(--button-color-bg-primary-default, #225595);
+  color: var(--text-color-text-inverse-primary-default, #fff);
+}
+
+.pw-action-add:focus-visible {
+  outline: 2px solid var(--color-brand-primary, #225595);
+  outline-offset: 2px;
+}
+
+.pw-action-add:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

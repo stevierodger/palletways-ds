@@ -22,3 +22,7 @@ export { CheckboxUnchecked } from "./CheckboxUnchecked";
 export type { CheckboxUncheckedProps } from "./CheckboxUnchecked";
 export { CheckboxChecked } from "./CheckboxChecked";
 export type { CheckboxCheckedProps } from "./CheckboxChecked";
+export { AddPlus } from "./AddPlus";
+export type { AddPlusProps } from "./AddPlus";
+export { RemoveMinus } from "./RemoveMinus";
+export type { RemoveMinusProps } from "./RemoveMinus";

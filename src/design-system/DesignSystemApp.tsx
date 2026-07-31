@@ -8,8 +8,12 @@ import { SpacingPage } from "./pages/SpacingPage";
 import { RadiusPage } from "./pages/RadiusPage";
 import { ShadowsPage } from "./pages/ShadowsPage";
 import { BreakpointsPage } from "./pages/BreakpointsPage";
+import { ActionAddPage } from "./pages/components/ActionAddPage";
+import { BadgePage } from "./pages/components/BadgePage";
 import { ButtonPage } from "./pages/components/ButtonPage";
 import { CheckboxPage } from "./pages/components/CheckboxPage";
+import { ChipPage } from "./pages/components/ChipPage";
+import { CounterPage } from "./pages/components/CounterPage";
 import { InputPage } from "./pages/components/InputPage";
 import { SwitchPage } from "./pages/components/SwitchPage";
 import { TagPage } from "./pages/components/TagPage";
@@ -35,8 +39,12 @@ const NAV: NavItem[] = [
     id: "components",
     label: "Components",
     children: [
+      { id: "action-add", label: "ActionAdd" },
+      { id: "badge", label: "Badge" },
       { id: "button", label: "Button" },
       { id: "checkbox", label: "Checkbox" },
+      { id: "chip", label: "Chip" },
+      { id: "counter", label: "Counter" },
       { id: "input", label: "Input" },
       { id: "switch", label: "Switch" },
       { id: "tag", label: "Tag" },
@@ -54,8 +62,12 @@ const PAGES: Record<string, ReactNode> = {
   radius: <RadiusPage />,
   shadows: <ShadowsPage />,
   breakpoints: <BreakpointsPage />,
+  "action-add": <ActionAddPage />,
+  badge: <BadgePage />,
   button: <ButtonPage />,
   checkbox: <CheckboxPage />,
+  chip: <ChipPage />,
+  counter: <CounterPage />,
   input: <InputPage />,
   switch: <SwitchPage />,
   tag: <TagPage />,

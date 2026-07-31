@@ -9,7 +9,7 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 ### What it does
 
 - Documents foundations: color, typography (incl. font weights), spacing (base, component, section), radius, shadows, breakpoints
-- Documents components: Button, Checkbox, Input, Switch, Tag, Toggle, Tracker
+- Documents components: ActionAdd, Badge, Button, Checkbox, Chip, Counter, Input, Switch, Tag, Toggle, Tracker
 - Uses real token values extracted from Figma MCP (`get_design_context` on component nodes)
 - Hash-based routing — share links like `/#/colors` or `/#/button`
 
@@ -31,9 +31,13 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 | `src/components/Icon/` | Arrow icons from Figma (SVG assets + React + nestable Code Connect) |
 | `figma.config.json` | Code Connect include/label/parser config |
 | `src/components/Input/` | Text field with label + error; Code Connect (`input-field`, `field`) |
-| `src/components/Checkbox/` | Labelled checkbox; Code Connect (`input.check-field`) |
+| `src/components/Checkbox/` | Labelled checkbox; Code Connect (`input.check-field`, `checkbox`) |
 | `src/components/Switch/` | On/off pill switch; Code Connect (`input.switch`) |
 | `src/components/Toggle/` | Two-option segmented control; Code Connect (`input.toggle`) |
+| `src/components/ActionAdd/` | Compact add action; Code Connect (`action.add`) |
+| `src/components/Counter/` | Quantity stepper; Code Connect (`action.counter`) |
+| `src/components/Chip/` | Status chips; Code Connect (`Chip`) |
+| `src/components/Badge/` | Uppercase category badge; Code Connect (`Badge`) |
 | `src/components/Tag/` | Semantic tag chips; Code Connect via Figma `label` |
 | `src/components/Tracker/` | Quote funnel step indicator; Code Connect (`tracker`) |
 | `src/App.tsx` | Renders design system site |
@@ -100,7 +104,18 @@ Exported as clean 24×24 SVGs via Figma Plugin API (`exportAsync`), using `curre
 | `input.switch` (`2002:1749`) | `Switch` | `src/components/Switch/switch.figma.ts` |
 | `input.toggle` (`2002:1773`) | `Toggle` | `src/components/Toggle/toggle.figma.ts` |
 
-Checkbox icons: Figma `Interface / Checkbox_Unchecked` (`297:1909`) and `Checkbox_Check` (`297:1908`) → `CheckboxUnchecked` / `CheckboxChecked` at 20px. Switch track colour is the same for off/on (matches Figma). Toggle `Property 1=primary` → option1; `secondary` → option2.
+Checkbox icons: Figma `Interface / Checkbox_Unchecked` (`297:1909`) and `Checkbox_Check` (`297:1908`) → `CheckboxUnchecked` / `CheckboxChecked` at 20px. Switch track colour is the same for off/on (matches Figma). Toggle `Property 1=primary` → option1; `secondary` → option2. Full state set `checkbox` (`2251:8006`) also maps to `Checkbox`.
+
+#### ActionAdd / Counter / Chip / Badge
+
+| Figma | Code | Template |
+|-------|------|----------|
+| `action.add` (`2280:8236`) | `ActionAdd` | `src/components/ActionAdd/action-add.figma.ts` |
+| `action.counter` (`2006:4000`) | `Counter` | `src/components/Counter/counter.figma.ts` |
+| `Chip` (`1:98`) | `Chip` | `src/components/Chip/chip.figma.ts` |
+| `Badge` (`30:41`) | `Badge` | `src/components/Badge/badge.figma.ts` |
+
+Plus/minus icons: `Edit / Add_Plus` (`2003:2092`), `Edit / Remove_Minus` (`2003:2093`). Chip tones use Figma hex (no WEB tokens on that set); leading glyphs from Figma `Icons` (`dot` / `alert` / `check` / `cross`).
 
 #### App token layer (`tokens.css`)
 

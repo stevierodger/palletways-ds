@@ -1,0 +1,51 @@
+.pw-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  box-sizing: border-box;
+  padding: 2px 6px;
+  border-radius: var(--corner-radius-rounded, 999px);
+  font-family: var(--font-polysans, Inter, sans-serif);
+  font-size: 12px;
+  font-weight: var(--font-weight-neutral, 400);
+  line-height: 1.5;
+  letter-spacing: -0.264px;
+  white-space: nowrap;
+}
+
+.pw-chip__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+.pw-chip__label {
+  min-width: 0;
+}
+
+.pw-chip--red {
+  background: #ffb9b9;
+  color: #890000;
+}
+
+.pw-chip--yellow {
+  background: #fffeb9;
+  color: #6e6c03;
+}
+
+.pw-chip--green {
+  background: #c5ffb9;
+  color: #156f03;
+}
+
+.pw-chip--blue {
+  background: #b9ddff;
+  color: #033b6f;
+}
+
+.pw-chip--purple {
+  background: #e9b9ff;
+  color: #4d036f;
+}

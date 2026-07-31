@@ -1,0 +1,17 @@
+.pw-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: #cfe7fa;
+  color: #5c5c5a;
+  font-family: var(--font-polysans, Inter, sans-serif);
+  font-size: 12px;
+  font-weight: var(--font-weight-median, 500);
+  line-height: normal;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
