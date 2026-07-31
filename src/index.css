@@ -3,6 +3,7 @@
 @import "@fontsource/geist-sans/700.css";
 @import "./styles/fonts.css";
 @import "./styles/tokens.css";
+@import "./styles/figma-variables.css";
 
 *,
 *::before,

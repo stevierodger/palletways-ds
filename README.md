@@ -22,11 +22,14 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 | `src/design-system/layout/` | `DocLayout`, `DocPage` (sidebar + content shell); `doc-table--type-scale` fixes equal breakpoint column widths on typography tables |
 | `src/design-system/components/` | `TokenSwatch`, `ColorRamp`, `SpacingScale`, `ComponentPreview`, `CodeBlock`, `PropTable`, `DoDont` |
 | `src/design-system/pages/` | Foundation + component documentation pages |
-| `src/styles/tokens.css` | CSS custom properties (colors, type, spacing) |
+| `src/styles/tokens.css` | App CSS custom properties (colors, type, spacing) |
+| `src/styles/figma-variables.css` | Figma variable catalogue using each variable’s WEB code syntax (Code Connect bridge) |
 | `src/styles/fonts.css` | PolySans Trial `@font-face` declarations |
 | `public/fonts/` | Drop licensed font files here (see README) |
 | `src/tokens/index.ts` | JS/TS token exports |
-| `src/components/Button/` | Primary / secondary / ghost button |
+| `src/components/Button/` | Primary / secondary / ghost button + Code Connect templates (`button-*.figma.ts`) |
+| `src/components/Icon/` | Arrow icons from Figma (SVG assets + React + nestable Code Connect) |
+| `figma.config.json` | Code Connect include/label/parser config |
 | `src/components/Input/` | Text field with label + error |
 | `src/components/Tag/` | Semantic tag chips |
 | `src/components/Tracker/` | Quote funnel step indicator |
@@ -34,7 +37,48 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 
 ### CSS / design tokens
 
-Defined in `src/styles/tokens.css` and mirrored in `src/tokens/index.ts`:
+**App tokens** live in `src/styles/tokens.css` (mirrored in `src/tokens/index.ts`). **Figma WEB catalogue** lives in `src/styles/figma-variables.css` — variable names match each Figma variable’s WEB code syntax 1:1 for Code Connect.
+
+#### Figma WEB catalogue (`figma-variables.css`)
+
+Exported from Palletways v1.2 local variables (196 vars / 6 collections). Imported from `src/index.css`.
+
+| Collection | Modes | Example WEB syntax |
+|------------|-------|--------------------|
+| Primitives | Default | `--brand-blue-700`, `--slate-900`, `--spacing-4` |
+| Status | Light / Dark | `--color-status-error-strong-default` (Dark via `[data-color-mode="dark"]`) |
+| Typography | Desktop / Tablet / Mobile | `--typography-heading-1-font-size` |
+| Semantics | Mode 1 | `--button-color-bg-primary-default`, `--corner-radius-md` |
+| Type Scale | Desktop / Tablet / Mobile | `--heading-h1`, `--body-base` |
+| Motion | Default | Proposed `--motion-*` (no WEB syntax set in Figma yet) |
+
+**Deploy notes:** Keep WEB code syntax in Figma as the source of truth; re-export when variables change. Do not rename CSS vars without updating Figma WEB syntax (breaks Code Connect mapping).
+
+### Code Connect (Button)
+
+Parserless templates map the nine published Figma sets (`button-{primary|secondary|ghost}-{sm|md|lg}`) to `src/components/Button/Button.tsx`.
+
+| Path | Role |
+|------|------|
+| `src/components/Button/button-*.figma.ts` | One template per Figma component set |
+| `src/components/Button/README.md` | Property map + publish notes |
+| `figma.config.json` | `include: src/**/*.figma.ts`, label React |
+
+**Property coverage:** `button text` → children; `State` → `loading` / `disabled` (hover/focus/error/success are visual-only); icon booleans + `leading-icon` / `trailing-icon` slots → `leadingIcon` / `trailingIcon`.
+
+**Publish:** `npx figma connect publish` with `FIGMA_ACCESS_TOKEN`. Variant/size live in the Figma set name, so each set has its own template with those props hardcoded.
+
+**MCP preview note:** Figma’s “Can’t generate MCP preview. Source code not found.” means the `source` URL isn’t reachable on GitHub yet. Templates use `https://github.com/stevierodger/palletways-web/blob/main/...` — push these files to `main` (or update the branch in the URL) for previews to resolve.
+
+#### Icons (Arrow set)
+
+Ten Figma `Arrow /*` components → React + SVG in `src/components/Icon/`:
+
+`ChevronLeft`, `ChevronRight`, `CaretDown`, `CaretUp`, `CaretCircleRight`, `ArrowCircleDown`, `ArrowCircleUp`, `ArrowCircleLeft`, `ArrowCircleRight`, `ArrowsReload`
+
+Exported as clean 24×24 SVGs via Figma Plugin API (`exportAsync`), using `currentColor`. Code Connect templates are `nestable: true` so they render inside Button icon slots.
+
+#### App token layer (`tokens.css`)
 
 | Category | Key variables | Figma source |
 |----------|---------------|--------------|
