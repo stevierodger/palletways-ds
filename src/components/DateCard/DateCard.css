@@ -1,0 +1,101 @@
+.pw-date-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--spacing-comp-y-md, 12px);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 429px;
+  padding: var(--spacing-comp-y-md, 12px) var(--spacing-comp-x-md, 16px);
+  border: 1px solid var(--border-color-border-natural-default, #cbd5e1);
+  border-radius: var(--corner-radius-sm, 8px);
+  background: var(--surface-color-bg-natural-default, #f8f8f8);
+}
+
+.pw-date-card__title {
+  margin: 0;
+  color: var(--text-color-text-body-secondary-default, #44536a);
+  font-family: var(--font-polysans);
+  font-size: var(--typography-body-large-font-size, 20px);
+  font-weight: var(--font-weight-median, 600);
+  line-height: var(--typography-body-large-line-height, 28px);
+}
+
+.pw-date-card__rule {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--border-color-border-natural-default, #cbd5e1);
+}
+
+.pw-date-card__calendar {
+  background: var(--surface-color-bg-subtle-default, #fff);
+  padding: var(--spacing-comp-y-md, 12px) var(--spacing-comp-x-md, 16px);
+}
+
+.pw-date-card__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-comp-y-md, 12px) var(--spacing-comp-x-sm, 8px);
+  background: var(--surface-color-bg-subtle-default, #fff);
+}
+
+.pw-date-card__nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--text-color-text-body-primary-default, #0f172a);
+}
+
+.pw-date-card__nav-btn:focus-visible {
+  outline: 2px solid var(--color-brand-primary, #225595);
+  outline-offset: 2px;
+}
+
+.pw-date-card__month {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-comp-x-md, 16px);
+  color: var(--text-color-text-body-primary-default, #0f172a);
+  font-family: var(--font-polysans);
+  font-size: var(--typography-body-small-font-size, 14px);
+  font-weight: var(--font-weight-median, 600);
+  line-height: var(--typography-body-small-line-height, 18px);
+  text-transform: uppercase;
+}
+
+.pw-date-card__grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.pw-date-card__grid .pw-calendar-date {
+  width: 100%;
+}
+
+.pw-date-card__countdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: var(--text-color-text-body-secondary-default, #44536a);
+  font-family: var(--font-polysans);
+  font-size: var(--typography-body-font-size, 16px);
+  font-weight: var(--font-weight-median, 600);
+  line-height: var(--typography-body-line-height, 24px);
+}
+
+.pw-date-card__footnote {
+  margin: 0;
+  color: var(--text-color-text-body-secondary-default, #44536a);
+  font-family: var(--font-polysans);
+  font-size: var(--typography-body-small-font-size, 14px);
+  font-weight: var(--font-weight-slim, 300);
+  line-height: var(--typography-body-small-line-height, 18px);
+}

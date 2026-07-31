@@ -17,7 +17,10 @@ import { CardNumberBadgePage } from "./pages/components/CardNumberBadgePage";
 import { CheckboxPage } from "./pages/components/CheckboxPage";
 import { ChipPage } from "./pages/components/ChipPage";
 import { CounterPage } from "./pages/components/CounterPage";
+import { DateCardPage } from "./pages/components/DateCardPage";
 import { InputPage } from "./pages/components/InputPage";
+import { PalletSizeInfoPage } from "./pages/components/PalletSizeInfoPage";
+import { SelectionCardPage } from "./pages/components/SelectionCardPage";
 import { SwitchPage } from "./pages/components/SwitchPage";
 import { TagPage } from "./pages/components/TagPage";
 import { TogglePage } from "./pages/components/TogglePage";
@@ -52,7 +55,10 @@ const NAV: NavItem[] = [
       { id: "checkbox", label: "Checkbox" },
       { id: "chip", label: "Chip" },
       { id: "counter", label: "Counter" },
+      { id: "date-card", label: "DateCard" },
       { id: "input", label: "Input" },
+      { id: "pallet-size-info", label: "PalletSizeInfo" },
+      { id: "selection-card", label: "SelectionCard" },
       { id: "switch", label: "Switch" },
       { id: "tag", label: "Tag" },
       { id: "toggle", label: "Toggle" },
@@ -79,7 +85,10 @@ const PAGES: Record<string, ReactNode> = {
   checkbox: <CheckboxPage />,
   chip: <ChipPage />,
   counter: <CounterPage />,
+  "date-card": <DateCardPage />,
   input: <InputPage />,
+  "pallet-size-info": <PalletSizeInfoPage />,
+  "selection-card": <SelectionCardPage />,
   switch: <SwitchPage />,
   tag: <TagPage />,
   toggle: <TogglePage />,

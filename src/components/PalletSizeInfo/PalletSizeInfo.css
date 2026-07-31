@@ -1,0 +1,19 @@
+.pw-pallet-size-info {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  color: var(--text-color-text-body-primary-default, #0f172a);
+  font-family: var(--font-polysans);
+  font-size: var(--typography-body-small-font-size, 14px);
+  line-height: var(--typography-body-small-line-height, 18px);
+  white-space: nowrap;
+}
+
+.pw-pallet-size-info__dimension {
+  font-weight: var(--font-weight-slim, 300);
+  color: var(--text-color-text-body-secondary-default, #44536a);
+}
+
+.pw-pallet-size-info__value {
+  font-weight: var(--font-weight-median, 600);
+}

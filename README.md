@@ -9,7 +9,7 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 ### What it does
 
 - Documents foundations: color, typography (incl. font weights), spacing (base, component, section), radius, shadows, breakpoints
-- Documents components: ActionAdd, Badge, Breadcrumbs, Button, CalendarDate, CardNumberBadge, Checkbox, Chip, Counter, Input, Switch, Tag, Toggle, Tracker, Trustpilot
+- Documents components: ActionAdd, Badge, Breadcrumbs, Button, CalendarDate, CardNumberBadge, Checkbox, Chip, Counter, DateCard, Input, PalletSizeInfo, SelectionCard, Switch, Tag, Toggle, Tracker, Trustpilot
 - Uses real token values extracted from Figma MCP (`get_design_context` on component nodes)
 - Hash-based routing — share links like `/#/colors` or `/#/button`
 
@@ -42,6 +42,9 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 | `src/components/CalendarDate/` | Calendar day cell; Code Connect (`calendar-date`) |
 | `src/components/CardNumberBadge/` | Link payment badge; Code Connect (`card-number-badge`) |
 | `src/components/Trustpilot/` | Trustpilot star tile; Code Connect (`trustpilot`) |
+| `src/components/DateCard/` | Collection date picker card; Code Connect (`date-card`) |
+| `src/components/SelectionCard/` | Economy/premium option card; Code Connect (`selection-cards`) |
+| `src/components/PalletSizeInfo/` | Dimension/value row; Code Connect (`info.pallet-size`) |
 | `src/components/Tag/` | Semantic tag chips; Code Connect via Figma `label` |
 | `src/components/Tracker/` | Quote funnel step indicator; Code Connect (`tracker`) |
 | `src/App.tsx` | Renders design system site |
@@ -131,6 +134,16 @@ Plus/minus icons: `Edit / Add_Plus` (`2003:2092`), `Edit / Remove_Minus` (`2003:
 | `trustpilot` (`194:2143`) | `Trustpilot` | `src/components/Trustpilot/trustpilot.figma.ts` |
 
 CalendarDate tones: `default` / `empty` / `today` / `collection` (green, left-round) / `travel` (mid range) / `delivery` (blue, right-round). Hover variants are CSS. Trustpilot star path from Figma VECTOR export.
+
+#### DateCard / SelectionCard / PalletSizeInfo
+
+| Figma | Code | Template |
+|-------|------|----------|
+| `date-card` (`2296:14613`) | `DateCard` | `src/components/DateCard/date-card.figma.ts` |
+| `selection-cards` (`2069:5436`) | `SelectionCard` | `src/components/SelectionCard/selection-card.figma.ts` |
+| `info.pallet-size` (`2007:4430`) | `PalletSizeInfo` | `src/components/PalletSizeInfo/pallet-size-info.figma.ts` |
+
+DateCard composes `CalendarDate` + chevrons. SelectionCard reuses `Button` + arrow icons; premium uses a subtle gradient background.
 
 #### App token layer (`tokens.css`)
 
