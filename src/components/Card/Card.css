@@ -175,14 +175,14 @@
 }
 
 .pw-card__star.pw-trustpilot {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   padding: 1.5px;
 }
 
 .pw-card__star .pw-trustpilot__star {
-  width: 17px;
-  height: 16px;
+  width: 13px;
+  height: 12.5px;
 }
 
 .pw-card__review {

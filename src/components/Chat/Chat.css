@@ -54,8 +54,8 @@
 
 .pw-chat__logo {
   display: block;
-  height: 32px;
   width: auto;
+  height: 50px;
 }
 
 .pw-chat__close {

@@ -5,10 +5,10 @@ import discover from "./assets/discover.svg";
 import "./AcceptedCards.css";
 
 const BRANDS = [
-  { id: "visa", src: visa, alt: "Visa" },
-  { id: "mastercard", src: mastercard, alt: "Mastercard" },
-  { id: "amex", src: amex, alt: "American Express" },
-  { id: "discover", src: discover, alt: "Discover" },
+  { id: "visa", src: visa, alt: "Visa", width: 36, height: 21 },
+  { id: "mastercard", src: mastercard, alt: "Mastercard", width: 21, height: 13 },
+  { id: "amex", src: amex, alt: "American Express", width: 42, height: 21 },
+  { id: "discover", src: discover, alt: "Discover", width: 33, height: 21 },
 ] as const;
 
 export type AcceptedCardsProps = {
@@ -21,11 +21,16 @@ export type AcceptedCardsProps = {
  */
 export function AcceptedCards({ className = "" }: AcceptedCardsProps) {
   return (
-    <div className={`pw-accepted-cards ${className}`.trim()} role="list" aria-label="Accepted cards">
+    <div className={`pw-accepted-cards ${className}`.trim()} aria-label="Accepted cards">
       {BRANDS.map((brand) => (
-        <span key={brand.id} className="pw-accepted-cards__item" role="listitem">
-          <img src={brand.src} alt={brand.alt} className="pw-accepted-cards__logo" />
-        </span>
+        <img
+          key={brand.id}
+          className={`pw-accepted-cards__logo pw-accepted-cards__logo--${brand.id}`}
+          src={brand.src}
+          alt={brand.alt}
+          width={brand.width}
+          height={brand.height}
+        />
       ))}
     </div>
   );
