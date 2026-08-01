@@ -31,9 +31,9 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 | `src/components/Icon/` | Arrow, Edit, Menu, and User icons from Figma (SVG assets + React + nestable Code Connect) |
 | `figma.config.json` | Code Connect include/label/parser config |
 | `src/components/AcceptedCards/` | Accepted payment brand logos; Code Connect (`info.pallet-selection/Accepted cards`) |
-| `src/components/Card/` | Content / Trustpilot review card; Code Connect (`card`) |
+| `src/components/Card/` | Content + Trustpilot review cards; Code Connect (`card`) |
 | `src/components/Chat/` | Chat launcher + panel; Code Connect (`chat.component`) |
-| `src/components/FieldComponents/` | Atomic field pieces; Code Connect (`field-components`, `Field input`) |
+| `src/components/FieldComponents/` | Atomic field pieces + Field input; Code Connect (`field-components`, `Field input`) |
 | `src/components/FieldTitle/` | Field label line; Code Connect (`field-title`) |
 | `src/components/Image/` | Aspect-ratio image frame; Code Connect (`image`) |
 | `src/components/Input/` | Text field with label, error, leading/trailing icons; Code Connect (`input-field`, `field`) |
@@ -155,6 +155,17 @@ Plus/minus icons: `Edit / Add_Plus` (`2003:2092`), `Edit / Remove_Minus` (`2003:
 | `trustpilot` (`194:2143`) | `Trustpilot` | `src/components/Trustpilot/trustpilot.figma.ts` |
 
 CalendarDate tones: `default` / `empty` / `today` / `collection` (green, left-round) / `travel` (mid range) / `delivery` (blue, right-round). Hover variants are CSS. Trustpilot star path from Figma VECTOR export.
+
+#### Card / Chat / FieldComponents
+
+| Figma | Code | Template |
+|-------|------|----------|
+| `card` (`2283:8404`) | `Card` | `src/components/Card/card.figma.ts` |
+| `chat.component` (`2145:13148`) | `Chat` | `src/components/Chat/chat.figma.ts` |
+| `field-components` (`2118:6960`) | `FieldComponents` | `src/components/FieldComponents/field-components.figma.ts` |
+| `Field input` (`2121:10615`) | `FieldInput` | `src/components/FieldComponents/field-input.figma.ts` |
+
+Card variants: `content-card` / `trustpilot-card` (composes `Image`, `Trustpilot`, `ExternalLink`). Chat states: `collapsed` / `expanded` (composes `LogoWordmark`, `Input`, icons). FieldComponents reuses `FieldTitle` for the title variant.
 
 #### DateCard / SelectionCard / PalletSizeInfo
 

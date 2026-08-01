@@ -80,15 +80,8 @@
 .pw-card__tags {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding: var(--spacing-comp-y-xs, 4px) var(--spacing-comp-x-sm, 8px);
-  border-radius: var(--spacing-comp-y-sm, 6px);
-  background: var(--button-color-bg-subtle-default, #f1f7ff);
-  color: var(--text-color-text-body-secondary-default, #44536a);
-  font-family: var(--font-polysans);
-  font-size: var(--typography-caption-font-size, 12px);
-  font-weight: 400;
-  line-height: var(--typography-caption-line-height, 12px);
+  flex-wrap: wrap;
+  gap: var(--spacing-comp-x-sm, 8px);
 }
 
 .pw-card__strong {
