@@ -24,10 +24,13 @@ import { InputPage } from "./pages/components/InputPage";
 import { LogoWordmarkPage } from "./pages/components/LogoWordmarkPage";
 import { NavMenuItemsPage } from "./pages/components/NavMenuItemsPage";
 import { PalletSelectionCardPage } from "./pages/components/PalletSelectionCardPage";
+import { PalletSelectionPage } from "./pages/components/PalletSelectionPage";
 import { PalletSizeInfoPage } from "./pages/components/PalletSizeInfoPage";
 import { PalletSizesPage } from "./pages/components/PalletSizesPage";
+import { PaymentCardPage } from "./pages/components/PaymentCardPage";
 import { SelectionCardPage } from "./pages/components/SelectionCardPage";
 import { SummaryActionPage } from "./pages/components/SummaryActionPage";
+import { SummaryCardPage } from "./pages/components/SummaryCardPage";
 import { SummaryFooterActionPanelPage } from "./pages/components/SummaryFooterActionPanelPage";
 import { SummaryFooterPricePage } from "./pages/components/SummaryFooterPricePage";
 import { SummaryHeaderPage } from "./pages/components/SummaryHeaderPage";
@@ -71,11 +74,14 @@ const NAV: NavItem[] = [
       { id: "input", label: "Input" },
       { id: "logo", label: "LogoWordmark" },
       { id: "nav-menu", label: "NavMenuItems" },
+      { id: "pallet-selection", label: "PalletSelection" },
       { id: "pallet-selection-card", label: "PalletSelectionCard" },
       { id: "pallet-size-info", label: "PalletSizeInfo" },
       { id: "pallet-sizes", label: "PalletSizes" },
+      { id: "payment-card", label: "PaymentCard" },
       { id: "selection-card", label: "SelectionCard" },
       { id: "summary-action", label: "SummaryAction" },
+      { id: "summary-card", label: "SummaryCard" },
       { id: "summary-footer-action-panel", label: "SummaryFooterActionPanel" },
       { id: "summary-footer-price", label: "SummaryFooterPrice" },
       { id: "summary-header", label: "SummaryHeader" },
@@ -111,11 +117,14 @@ const PAGES: Record<string, ReactNode> = {
   input: <InputPage />,
   logo: <LogoWordmarkPage />,
   "nav-menu": <NavMenuItemsPage />,
+  "pallet-selection": <PalletSelectionPage />,
   "pallet-selection-card": <PalletSelectionCardPage />,
   "pallet-size-info": <PalletSizeInfoPage />,
   "pallet-sizes": <PalletSizesPage />,
+  "payment-card": <PaymentCardPage />,
   "selection-card": <SelectionCardPage />,
   "summary-action": <SummaryActionPage />,
+  "summary-card": <SummaryCardPage />,
   "summary-footer-action-panel": <SummaryFooterActionPanelPage />,
   "summary-footer-price": <SummaryFooterPricePage />,
   "summary-header": <SummaryHeaderPage />,

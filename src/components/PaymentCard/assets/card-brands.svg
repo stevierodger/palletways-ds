@@ -1,0 +1,10 @@
+<svg width="88" height="16" viewBox="0 0 88 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="1" width="20" height="14" rx="2" fill="#1A1F71"/>
+  <text x="10" y="11" text-anchor="middle" fill="#fff" font-size="5" font-family="Arial,sans-serif" font-weight="700">VISA</text>
+  <circle cx="34" cy="8" r="6" fill="#EB001B"/>
+  <circle cx="40" cy="8" r="6" fill="#F79E1B" fill-opacity="0.9"/>
+  <rect x="50" y="1" width="16" height="14" rx="2" fill="#2E77BC"/>
+  <text x="58" y="11" text-anchor="middle" fill="#fff" font-size="4.5" font-family="Arial,sans-serif" font-weight="700">AMEX</text>
+  <rect x="70" y="1" width="18" height="14" rx="2" fill="#FF6000"/>
+  <text x="79" y="11" text-anchor="middle" fill="#fff" font-size="3.5" font-family="Arial,sans-serif" font-weight="700">DISC</text>
+</svg>

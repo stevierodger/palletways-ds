@@ -3,7 +3,8 @@ import "./SummaryHeader.css";
 
 export type SummaryHeaderProps = {
   title?: string;
-  action?: SummaryActionProps;
+  /** Pass `null` to hide the action. */
+  action?: SummaryActionProps | null;
   className?: string;
 };
 
@@ -16,12 +17,13 @@ export function SummaryHeader({
   action,
   className = "",
 }: SummaryHeaderProps) {
+  const showAction = action !== null;
   const actionProps: SummaryActionProps = action ?? { variant: "edit" };
 
   return (
     <header className={`pw-summary-header ${className}`.trim()}>
       <h2 className="pw-summary-header__title">{title}</h2>
-      <SummaryAction {...actionProps} />
+      {showAction ? <SummaryAction {...actionProps} /> : null}
     </header>
   );
 }

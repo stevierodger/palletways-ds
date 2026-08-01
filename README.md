@@ -51,8 +51,11 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 | `src/components/NavMenu/` | Primary nav items; Code Connect (`nav.menu-items`) |
 | `src/components/FooterNavigation/` | Site footer bar; Code Connect (`footer-navigation`) |
 | `src/components/HeaderNavigation/` | Site header bar; Code Connect (`header-navigation`) |
+| `src/components/PalletSelection/` | Pallet picker layout; Code Connect (`info.pallet-selection`) |
 | `src/components/PalletSelectionCard/` | Pallet size selection/help card; Code Connect (`info.pallet-selection-card`) |
 | `src/components/PalletSizes/` | Pallet size illustrations; Code Connect (`pallet-sizes`) |
+| `src/components/PaymentCard/` | Checkout payment panel; Code Connect (`payment-card`) |
+| `src/components/SummaryCard/` | Order summary card; Code Connect (`summary-card`) |
 | `src/components/SummaryFooterActionPanel/` | Summary footer CTAs; Code Connect (`summary-footer/action-panel`) |
 | `src/components/SummaryFooterPrice/` | Summary price breakdown; Code Connect (`summary-footer/price`) |
 | `src/components/Tag/` | Semantic tag chips; Code Connect via Figma `label` |
@@ -178,8 +181,11 @@ HeaderNavigation composes `LogoWordmark` + `NavMenuItems`. SummaryHeader compose
 | `summary-footer/action-panel` (`2287:10610`) | `SummaryFooterActionPanel` | `src/components/SummaryFooterActionPanel/summary-footer-action-panel.figma.ts` |
 | `pallet-sizes` (`2012:2844`) | `PalletSizes` | `src/components/PalletSizes/pallet-sizes.figma.ts` |
 | `info.pallet-selection-card` (`2007:4482`) | `PalletSelectionCard` | `src/components/PalletSelectionCard/pallet-selection-card.figma.ts` |
+| `info.pallet-selection` (`2007:5851`) | `PalletSelection` | `src/components/PalletSelection/pallet-selection.figma.ts` |
+| `payment-card` (`2137:10584`) | `PaymentCard` | `src/components/PaymentCard/payment-card.figma.ts` |
+| `summary-card` (`2283:10482`) | `SummaryCard` | `src/components/SummaryCard/summary-card.figma.ts` |
 
-FooterNavigation uses `logo-footer-inner.svg` (clean white wordmark). PalletSelectionCard composes `Button`, `ActionAdd`, `PalletSizeInfo`, `PalletSizes`, and arrow icons.
+FooterNavigation uses `logo-footer-inner.svg` (clean white wordmark). PalletSelectionCard composes `Button`, `ActionAdd`, `PalletSizeInfo`, `PalletSizes`, and arrow icons. PalletSelection composes PalletSelectionCard. SummaryCard composes SummaryHeader, SummaryFooterPrice, and optional SummaryFooterActionPanel. PaymentCard composes Button, CardNumberBadge, and wallet/OTP assets.
 
 #### App token layer (`tokens.css`)
 

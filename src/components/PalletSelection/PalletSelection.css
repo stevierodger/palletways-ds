@@ -1,0 +1,27 @@
+.pw-pallet-selection {
+  box-sizing: border-box;
+  display: grid;
+  gap: 0;
+  width: 100%;
+  max-width: 1359px;
+  overflow: hidden;
+  background: var(--surface-color-bg-subtle-default, #fff);
+  border: 2px solid var(--border-color-border-natural-default, #cbd5e1);
+  border-radius: var(--corner-radius-sm, 8px);
+}
+
+.pw-pallet-selection--default {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-content: start;
+}
+
+.pw-pallet-selection--alt {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  overflow-x: auto;
+}
+
+.pw-pallet-selection--alt > * {
+  flex: 0 0 auto;
+}

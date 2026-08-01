@@ -146,8 +146,9 @@ export function OverviewPage() {
                 ActionAdd, Badge, Breadcrumbs, Button, CalendarDate,
                 CardNumberBadge, Checkbox, Chip, Counter, DateCard,
                 FooterNavigation, HeaderNavigation, Input, LogoWordmark,
-                NavMenuItems, PalletSelectionCard, PalletSizeInfo, PalletSizes,
-                SelectionCard, SummaryAction, SummaryFooterActionPanel,
+                NavMenuItems, PalletSelection, PalletSelectionCard,
+                PalletSizeInfo, PalletSizes, PaymentCard, SelectionCard,
+                SummaryAction, SummaryCard, SummaryFooterActionPanel,
                 SummaryFooterPrice, SummaryHeader, Switch, Tag, Toggle,
                 Tracker, Trustpilot
               </td>
