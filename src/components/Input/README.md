@@ -14,6 +14,6 @@
 | `Help text` + `Show help text` | `hint` |
 | `State=error` + help text | `error` |
 | `State=disabled` | `disabled` |
-| Leading/Trailing icon | omitted — no `Input` icon props yet |
+| Leading/Trailing icon | `leadingIcon` / `trailingIcon` |
 
 Publish: `npx figma connect publish`

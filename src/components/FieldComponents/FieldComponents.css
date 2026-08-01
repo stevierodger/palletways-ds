@@ -1,0 +1,148 @@
+.pw-field-components {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 276px;
+}
+
+.pw-field-components--title {
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--spacing-comp-x-xs, 4px);
+}
+
+.pw-field-components--input {
+  align-items: center;
+  gap: 12px;
+  padding: var(--spacing-comp-y-md, 12px) var(--spacing-comp-x-md, 16px);
+  border: 1px solid var(--border-color-border-subtle-default, #e2e8f0);
+  border-radius: var(--spacing-3, 12px);
+  background: var(--surface-color-bg-subtle-default, #fff);
+}
+
+.pw-field-components--dropdown {
+  align-items: center;
+  gap: 12px;
+  padding: var(--spacing-comp-y-md, 12px) var(--spacing-comp-x-md, 16px);
+}
+
+.pw-field-components--field-dropdown-option {
+  background: var(--surface-color-bg-subtle-default, #fff);
+}
+
+.pw-field-components--field-dropdown-hover {
+  background: var(--surface-color-bg-subtle-hover, #f8f8f8);
+}
+
+.pw-field-components--help {
+  align-items: flex-start;
+  gap: var(--spacing-1, 4px);
+  min-height: 26px;
+  padding: var(--spacing-comp-y-xs, 4px) var(--spacing-comp-x-xs, 4px);
+}
+
+.pw-field-components__leading,
+.pw-field-components__trailing,
+.pw-field-components__help-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  color: var(--icon-color-icon-secondary-default, #44536a);
+}
+
+.pw-field-components__leading svg,
+.pw-field-components__trailing svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.pw-field-components__help-icon svg,
+.pw-field-components--help .pw-field-components__trailing svg {
+  width: 16px;
+  height: 16px;
+}
+
+.pw-field-components__help-text {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  color: var(--text-color-text-body-secondary-default, #44536a);
+  font-family: var(--font-polysans);
+  font-size: var(--typography-caption-font-size, 12px);
+  font-weight: 300;
+  line-height: var(--typography-caption-line-height, 12px);
+}
+
+.pw-field-components__value {
+  flex: 1;
+  min-width: 0;
+}
+
+.pw-field-components__native {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--text-color-text-body-example-default, #64748b);
+  font-family: var(--font-polysans);
+  font-size: var(--typography-body-small-font-size, 14px);
+  font-weight: 300;
+  line-height: var(--typography-body-small-line-height, 18px);
+}
+
+.pw-field-components__native--filled,
+.pw-field-components__native:not(:placeholder-shown) {
+  color: var(--text-color-text-body-secondary-default, #44536a);
+  font-weight: 600;
+}
+
+.pw-field-components__native:focus {
+  outline: none;
+}
+
+.pw-field-input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 18px;
+}
+
+.pw-field-input--filled {
+  gap: 8px;
+}
+
+.pw-field-input__text {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-polysans);
+  font-size: var(--typography-body-small-font-size, 14px);
+  line-height: var(--typography-body-small-line-height, 18px);
+}
+
+.pw-field-input--placeholder .pw-field-input__text {
+  color: var(--text-color-text-body-example-default, #64748b);
+  font-weight: 300;
+}
+
+.pw-field-input--filled .pw-field-input__text {
+  color: var(--text-color-text-body-secondary-default, #44536a);
+  font-weight: 600;
+}
+
+.pw-field-input__action {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--text-color-text-body-secondary-default, #44536a);
+  font-family: var(--font-polysans);
+  font-size: var(--typography-body-small-font-size, 14px);
+  font-weight: 400;
+  line-height: var(--typography-body-small-line-height, 18px);
+  white-space: nowrap;
+  cursor: pointer;
+}

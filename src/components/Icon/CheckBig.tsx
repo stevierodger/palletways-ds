@@ -1,0 +1,36 @@
+import type { SVGProps } from "react";
+import "./Icon.css";
+
+export type CheckBigProps = SVGProps<SVGSVGElement> & {
+  /** Pixel size (width & height). Defaults to 24 to match Figma. */
+  size?: number | string;
+  title?: string;
+};
+
+/** Figma: Interface / Check_Big */
+export function CheckBig({
+  size = 24,
+  title,
+  className = "",
+  ...rest
+}: CheckBigProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={`pw-icon pw-icon--check-big ${className}`.trim()}
+      role={title ? "img" : "presentation"}
+      aria-hidden={title ? undefined : true}
+      {...rest}
+    >
+      {title ? <title>{title}</title> : null}
+      <path
+        d="M8.95018 17.9502C8.69428 17.9502 8.43845 17.8525 8.24315 17.6572L3.29295 12.707C2.90235 12.3164 2.90235 11.6836 3.29295 11.2929C3.68355 10.9022 4.31631 10.9023 4.70701 11.2929L8.95018 15.5361L18.8535 5.63572C19.2441 5.24512 19.8769 5.24512 20.2676 5.63572C20.6583 6.02632 20.6582 6.65962 20.2676 7.04982L9.65721 17.6572C9.46181 17.8525 9.20608 17.9502 8.95018 17.9502Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}

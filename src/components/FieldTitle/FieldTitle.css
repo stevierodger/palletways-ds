@@ -1,0 +1,26 @@
+.pw-field-title {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 276px;
+}
+
+.pw-field-title__text {
+  flex: 1;
+  margin: 0;
+  min-width: 0;
+  height: 24px;
+  font-family: var(--font-polysans);
+  font-size: var(--typography-body-font-size, 16px);
+  line-height: var(--typography-body-line-height, 24px);
+}
+
+.pw-field-title--active .pw-field-title__text {
+  font-weight: 600;
+  color: var(--text-color-text-body-primary-default, #0f172a);
+}
+
+.pw-field-title--secondary .pw-field-title__text {
+  font-weight: 400;
+  color: var(--icon-color-icon-secondary-default, #44536a);
+}

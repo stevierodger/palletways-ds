@@ -1,0 +1,26 @@
+.pw-image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  background: var(--bg-color-bg-secondary-default, #f1f5f9);
+}
+
+.pw-image--landscape {
+  aspect-ratio: 16 / 9;
+}
+
+.pw-image--square {
+  aspect-ratio: 1 / 1;
+}
+
+.pw-image--portrait {
+  aspect-ratio: 3 / 4;
+}
+
+.pw-image__media {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

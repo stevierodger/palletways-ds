@@ -9,7 +9,7 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 ### What it does
 
 - Documents foundations: color, typography (incl. font weights), spacing (base, component, section), radius, shadows, breakpoints
-- Documents components: ActionAdd, Badge, Breadcrumbs, Button, CalendarDate, CardNumberBadge, Checkbox, Chip, Counter, DateCard, FooterNavigation, HeaderNavigation, Input, LogoWordmark, NavMenuItems, PalletSelectionCard, PalletSizeInfo, PalletSizes, SelectionCard, SummaryAction, SummaryFooterActionPanel, SummaryFooterPrice, SummaryHeader, Switch, Tag, Toggle, Tracker, Trustpilot
+- Documents components: AcceptedCards, ActionAdd, Badge, Breadcrumbs, Button, CalendarDate, Card, CardNumberBadge, Chat, Checkbox, Chip, Counter, DateCard, FieldComponents, FieldTitle, FooterNavigation, HeaderNavigation, Image, Input, LogoWordmark, NavMenuItems, PalletSelection, PalletSelectionCard, PalletSizeInfo, PalletSizes, PaymentCard, SelectionCard, SummaryAction, SummaryCard, SummaryFooterActionPanel, SummaryFooterPrice, SummaryHeader, Switch, Tag, Toggle, Tracker, Trustpilot
 - Uses real token values extracted from Figma MCP (`get_design_context` on component nodes)
 - Hash-based routing — share links like `/#/colors` or `/#/button`
 
@@ -30,7 +30,13 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 | `src/components/Button/` | Primary / secondary / ghost button + Code Connect templates (`button-*.figma.ts`) |
 | `src/components/Icon/` | Arrow, Edit, Menu, and User icons from Figma (SVG assets + React + nestable Code Connect) |
 | `figma.config.json` | Code Connect include/label/parser config |
-| `src/components/Input/` | Text field with label + error; Code Connect (`input-field`, `field`) |
+| `src/components/AcceptedCards/` | Accepted payment brand logos; Code Connect (`info.pallet-selection/Accepted cards`) |
+| `src/components/Card/` | Content / Trustpilot review card; Code Connect (`card`) |
+| `src/components/Chat/` | Chat launcher + panel; Code Connect (`chat.component`) |
+| `src/components/FieldComponents/` | Atomic field pieces; Code Connect (`field-components`, `Field input`) |
+| `src/components/FieldTitle/` | Field label line; Code Connect (`field-title`) |
+| `src/components/Image/` | Aspect-ratio image frame; Code Connect (`image`) |
+| `src/components/Input/` | Text field with label, error, leading/trailing icons; Code Connect (`input-field`, `field`) |
 | `src/components/Checkbox/` | Labelled checkbox; Code Connect (`input.check-field`, `checkbox`) |
 | `src/components/Switch/` | On/off pill switch; Code Connect (`input.switch`) |
 | `src/components/Toggle/` | Two-option segmented control; Code Connect (`input.toggle`) |

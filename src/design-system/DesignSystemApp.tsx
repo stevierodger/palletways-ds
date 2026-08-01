@@ -8,18 +8,24 @@ import { SpacingPage } from "./pages/SpacingPage";
 import { RadiusPage } from "./pages/RadiusPage";
 import { ShadowsPage } from "./pages/ShadowsPage";
 import { BreakpointsPage } from "./pages/BreakpointsPage";
+import { AcceptedCardsPage } from "./pages/components/AcceptedCardsPage";
 import { ActionAddPage } from "./pages/components/ActionAddPage";
 import { BadgePage } from "./pages/components/BadgePage";
 import { BreadcrumbsPage } from "./pages/components/BreadcrumbsPage";
 import { ButtonPage } from "./pages/components/ButtonPage";
 import { CalendarDatePage } from "./pages/components/CalendarDatePage";
+import { CardPage } from "./pages/components/CardPage";
 import { CardNumberBadgePage } from "./pages/components/CardNumberBadgePage";
+import { ChatPage } from "./pages/components/ChatPage";
 import { CheckboxPage } from "./pages/components/CheckboxPage";
 import { ChipPage } from "./pages/components/ChipPage";
 import { CounterPage } from "./pages/components/CounterPage";
 import { DateCardPage } from "./pages/components/DateCardPage";
+import { FieldComponentsPage } from "./pages/components/FieldComponentsPage";
+import { FieldTitlePage } from "./pages/components/FieldTitlePage";
 import { FooterNavigationPage } from "./pages/components/FooterNavigationPage";
 import { HeaderNavigationPage } from "./pages/components/HeaderNavigationPage";
+import { ImagePage } from "./pages/components/ImagePage";
 import { InputPage } from "./pages/components/InputPage";
 import { LogoWordmarkPage } from "./pages/components/LogoWordmarkPage";
 import { NavMenuItemsPage } from "./pages/components/NavMenuItemsPage";
@@ -59,18 +65,24 @@ const NAV: NavItem[] = [
     id: "components",
     label: "Components",
     children: [
+      { id: "accepted-cards", label: "AcceptedCards" },
       { id: "action-add", label: "ActionAdd" },
       { id: "badge", label: "Badge" },
       { id: "breadcrumbs", label: "Breadcrumbs" },
       { id: "button", label: "Button" },
       { id: "calendar-date", label: "CalendarDate" },
+      { id: "card", label: "Card" },
       { id: "card-number-badge", label: "CardNumberBadge" },
+      { id: "chat", label: "Chat" },
       { id: "checkbox", label: "Checkbox" },
       { id: "chip", label: "Chip" },
       { id: "counter", label: "Counter" },
       { id: "date-card", label: "DateCard" },
+      { id: "field-components", label: "FieldComponents" },
+      { id: "field-title", label: "FieldTitle" },
       { id: "footer-navigation", label: "FooterNavigation" },
       { id: "header-navigation", label: "HeaderNavigation" },
+      { id: "image", label: "Image" },
       { id: "input", label: "Input" },
       { id: "logo", label: "LogoWordmark" },
       { id: "nav-menu", label: "NavMenuItems" },
@@ -102,18 +114,24 @@ const PAGES: Record<string, ReactNode> = {
   radius: <RadiusPage />,
   shadows: <ShadowsPage />,
   breakpoints: <BreakpointsPage />,
+  "accepted-cards": <AcceptedCardsPage />,
   "action-add": <ActionAddPage />,
   badge: <BadgePage />,
   breadcrumbs: <BreadcrumbsPage />,
   button: <ButtonPage />,
   "calendar-date": <CalendarDatePage />,
+  card: <CardPage />,
   "card-number-badge": <CardNumberBadgePage />,
+  chat: <ChatPage />,
   checkbox: <CheckboxPage />,
   chip: <ChipPage />,
   counter: <CounterPage />,
   "date-card": <DateCardPage />,
+  "field-components": <FieldComponentsPage />,
+  "field-title": <FieldTitlePage />,
   "footer-navigation": <FooterNavigationPage />,
   "header-navigation": <HeaderNavigationPage />,
+  image: <ImagePage />,
   input: <InputPage />,
   logo: <LogoWordmarkPage />,
   "nav-menu": <NavMenuItemsPage />,

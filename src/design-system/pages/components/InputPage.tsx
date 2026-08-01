@@ -54,6 +54,11 @@ export function InputPage() {
             { prop: "label", type: "string", description: "Visible field label" },
             { prop: "error", type: "string", description: "Error message below field" },
             { prop: "hint", type: "string", description: "Helper text when no error" },
+            {
+              prop: "leadingIcon / trailingIcon",
+              type: "ReactNode",
+              description: "Optional icons inside the input box",
+            },
           ]}
         />
       </DocSection>

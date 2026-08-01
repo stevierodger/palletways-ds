@@ -143,9 +143,10 @@ export function OverviewPage() {
             <tr>
               <td>Components</td>
               <td>
-                ActionAdd, Badge, Breadcrumbs, Button, CalendarDate,
-                CardNumberBadge, Checkbox, Chip, Counter, DateCard,
-                FooterNavigation, HeaderNavigation, Input, LogoWordmark,
+                AcceptedCards, ActionAdd, Badge, Breadcrumbs, Button,
+                CalendarDate, Card, CardNumberBadge, Chat, Checkbox, Chip,
+                Counter, DateCard, FieldComponents, FieldTitle,
+                FooterNavigation, HeaderNavigation, Image, Input, LogoWordmark,
                 NavMenuItems, PalletSelection, PalletSelectionCard,
                 PalletSizeInfo, PalletSizes, PaymentCard, SelectionCard,
                 SummaryAction, SummaryCard, SummaryFooterActionPanel,
