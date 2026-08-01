@@ -1,0 +1,69 @@
+.pw-pallet-sizes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 168px;
+  height: 120px;
+  padding: var(--spacing-comp-x-md, 16px) var(--spacing-comp-x-lg, 24px);
+  background: var(--button-color-bg-subtle-default, #f1f7ff);
+}
+
+.pw-pallet-sizes__stack {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: max-content;
+  grid-template-rows: max-content;
+  line-height: 0;
+}
+
+.pw-pallet-sizes__cargo {
+  grid-column: 1;
+  grid-row: 1;
+  display: block;
+  width: 110px;
+  height: 117px;
+  margin-top: 3.69px;
+  object-fit: contain;
+  object-position: left bottom;
+  pointer-events: none;
+}
+
+.pw-pallet-sizes__person {
+  grid-column: 1;
+  grid-row: 1;
+  display: block;
+  width: 23px;
+  height: 72px;
+  margin-top: 0;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.pw-pallet-sizes--mini .pw-pallet-sizes__person {
+  margin-left: 72.52px;
+}
+
+.pw-pallet-sizes--x-small .pw-pallet-sizes__person {
+  margin-left: 73.27px;
+}
+
+.pw-pallet-sizes--small .pw-pallet-sizes__person {
+  margin-left: 72.99px;
+}
+
+.pw-pallet-sizes--medium .pw-pallet-sizes__person {
+  margin-left: 72.7px;
+}
+
+.pw-pallet-sizes--narrow-medium .pw-pallet-sizes__person {
+  margin-left: 73.42px;
+}
+
+.pw-pallet-sizes--large .pw-pallet-sizes__person {
+  margin-left: 72.73px;
+}
+
+.pw-pallet-sizes--x-large .pw-pallet-sizes__person {
+  margin-left: 72.84px;
+}

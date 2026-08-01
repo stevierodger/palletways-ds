@@ -145,9 +145,11 @@ export function OverviewPage() {
               <td>
                 ActionAdd, Badge, Breadcrumbs, Button, CalendarDate,
                 CardNumberBadge, Checkbox, Chip, Counter, DateCard,
-                HeaderNavigation, Input, LogoWordmark, NavMenuItems,
-                PalletSizeInfo, SelectionCard, SummaryAction, SummaryHeader,
-                Switch, Tag, Toggle, Tracker, Trustpilot
+                FooterNavigation, HeaderNavigation, Input, LogoWordmark,
+                NavMenuItems, PalletSelectionCard, PalletSizeInfo, PalletSizes,
+                SelectionCard, SummaryAction, SummaryFooterActionPanel,
+                SummaryFooterPrice, SummaryHeader, Switch, Tag, Toggle,
+                Tracker, Trustpilot
               </td>
             </tr>
           </tbody>

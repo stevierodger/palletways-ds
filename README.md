@@ -9,7 +9,7 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 ### What it does
 
 - Documents foundations: color, typography (incl. font weights), spacing (base, component, section), radius, shadows, breakpoints
-- Documents components: ActionAdd, Badge, Breadcrumbs, Button, CalendarDate, CardNumberBadge, Checkbox, Chip, Counter, DateCard, HeaderNavigation, Input, LogoWordmark, NavMenuItems, PalletSizeInfo, SelectionCard, SummaryAction, SummaryHeader, Switch, Tag, Toggle, Tracker, Trustpilot
+- Documents components: ActionAdd, Badge, Breadcrumbs, Button, CalendarDate, CardNumberBadge, Checkbox, Chip, Counter, DateCard, FooterNavigation, HeaderNavigation, Input, LogoWordmark, NavMenuItems, PalletSelectionCard, PalletSizeInfo, PalletSizes, SelectionCard, SummaryAction, SummaryFooterActionPanel, SummaryFooterPrice, SummaryHeader, Switch, Tag, Toggle, Tracker, Trustpilot
 - Uses real token values extracted from Figma MCP (`get_design_context` on component nodes)
 - Hash-based routing — share links like `/#/colors` or `/#/button`
 
@@ -49,7 +49,12 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 | `src/components/SummaryAction/` | Edit / order-again summary action; Code Connect (`summary-action`) |
 | `src/components/SummaryHeader/` | Order summary header; Code Connect (`summary-header`) |
 | `src/components/NavMenu/` | Primary nav items; Code Connect (`nav.menu-items`) |
+| `src/components/FooterNavigation/` | Site footer bar; Code Connect (`footer-navigation`) |
 | `src/components/HeaderNavigation/` | Site header bar; Code Connect (`header-navigation`) |
+| `src/components/PalletSelectionCard/` | Pallet size selection/help card; Code Connect (`info.pallet-selection-card`) |
+| `src/components/PalletSizes/` | Pallet size illustrations; Code Connect (`pallet-sizes`) |
+| `src/components/SummaryFooterActionPanel/` | Summary footer CTAs; Code Connect (`summary-footer/action-panel`) |
+| `src/components/SummaryFooterPrice/` | Summary price breakdown; Code Connect (`summary-footer/price`) |
 | `src/components/Tag/` | Semantic tag chips; Code Connect via Figma `label` |
 | `src/components/Tracker/` | Quote funnel step indicator; Code Connect (`tracker`) |
 | `src/App.tsx` | Renders design system site |
@@ -163,6 +168,18 @@ DateCard composes `CalendarDate` + chevrons. SelectionCard reuses `Button` + arr
 | `header-navigation` (`194:2378`) | `HeaderNavigation` | `src/components/HeaderNavigation/header-navigation.figma.ts` |
 
 HeaderNavigation composes `LogoWordmark` + `NavMenuItems`. SummaryHeader composes `SummaryAction`. NavMenuItems uses `Button`, `CaretDown`, `ChevronRight`, `Hamburger`, `User`, and UK flag asset.
+
+#### Footer / Summary footer / Pallet selection
+
+| Figma | Code | Template |
+|-------|------|----------|
+| `footer-navigation` (`288:1603`) | `FooterNavigation` | `src/components/FooterNavigation/footer-navigation.figma.ts` |
+| `summary-footer/price` (`2287:10609`) | `SummaryFooterPrice` | `src/components/SummaryFooterPrice/summary-footer-price.figma.ts` |
+| `summary-footer/action-panel` (`2287:10610`) | `SummaryFooterActionPanel` | `src/components/SummaryFooterActionPanel/summary-footer-action-panel.figma.ts` |
+| `pallet-sizes` (`2012:2844`) | `PalletSizes` | `src/components/PalletSizes/pallet-sizes.figma.ts` |
+| `info.pallet-selection-card` (`2007:4482`) | `PalletSelectionCard` | `src/components/PalletSelectionCard/pallet-selection-card.figma.ts` |
+
+FooterNavigation uses `logo-footer-inner.svg` (clean white wordmark). PalletSelectionCard composes `Button`, `ActionAdd`, `PalletSizeInfo`, `PalletSizes`, and arrow icons.
 
 #### App token layer (`tokens.css`)
 

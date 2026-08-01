@@ -1,0 +1,13 @@
+.pw-summary-footer-action-panel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 397px;
+  padding: var(--spacing-comp-y-sm, 6px) var(--spacing-comp-x-sm, 8px);
+}
+
+.pw-summary-footer-action-panel .pw-button {
+  flex: 0 1 auto;
+}

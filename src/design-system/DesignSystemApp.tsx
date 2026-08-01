@@ -18,13 +18,18 @@ import { CheckboxPage } from "./pages/components/CheckboxPage";
 import { ChipPage } from "./pages/components/ChipPage";
 import { CounterPage } from "./pages/components/CounterPage";
 import { DateCardPage } from "./pages/components/DateCardPage";
+import { FooterNavigationPage } from "./pages/components/FooterNavigationPage";
 import { HeaderNavigationPage } from "./pages/components/HeaderNavigationPage";
 import { InputPage } from "./pages/components/InputPage";
 import { LogoWordmarkPage } from "./pages/components/LogoWordmarkPage";
 import { NavMenuItemsPage } from "./pages/components/NavMenuItemsPage";
+import { PalletSelectionCardPage } from "./pages/components/PalletSelectionCardPage";
 import { PalletSizeInfoPage } from "./pages/components/PalletSizeInfoPage";
+import { PalletSizesPage } from "./pages/components/PalletSizesPage";
 import { SelectionCardPage } from "./pages/components/SelectionCardPage";
 import { SummaryActionPage } from "./pages/components/SummaryActionPage";
+import { SummaryFooterActionPanelPage } from "./pages/components/SummaryFooterActionPanelPage";
+import { SummaryFooterPricePage } from "./pages/components/SummaryFooterPricePage";
 import { SummaryHeaderPage } from "./pages/components/SummaryHeaderPage";
 import { SwitchPage } from "./pages/components/SwitchPage";
 import { TagPage } from "./pages/components/TagPage";
@@ -61,13 +66,18 @@ const NAV: NavItem[] = [
       { id: "chip", label: "Chip" },
       { id: "counter", label: "Counter" },
       { id: "date-card", label: "DateCard" },
+      { id: "footer-navigation", label: "FooterNavigation" },
       { id: "header-navigation", label: "HeaderNavigation" },
       { id: "input", label: "Input" },
       { id: "logo", label: "LogoWordmark" },
       { id: "nav-menu", label: "NavMenuItems" },
+      { id: "pallet-selection-card", label: "PalletSelectionCard" },
       { id: "pallet-size-info", label: "PalletSizeInfo" },
+      { id: "pallet-sizes", label: "PalletSizes" },
       { id: "selection-card", label: "SelectionCard" },
       { id: "summary-action", label: "SummaryAction" },
+      { id: "summary-footer-action-panel", label: "SummaryFooterActionPanel" },
+      { id: "summary-footer-price", label: "SummaryFooterPrice" },
       { id: "summary-header", label: "SummaryHeader" },
       { id: "switch", label: "Switch" },
       { id: "tag", label: "Tag" },
@@ -96,13 +106,18 @@ const PAGES: Record<string, ReactNode> = {
   chip: <ChipPage />,
   counter: <CounterPage />,
   "date-card": <DateCardPage />,
+  "footer-navigation": <FooterNavigationPage />,
   "header-navigation": <HeaderNavigationPage />,
   input: <InputPage />,
   logo: <LogoWordmarkPage />,
   "nav-menu": <NavMenuItemsPage />,
+  "pallet-selection-card": <PalletSelectionCardPage />,
   "pallet-size-info": <PalletSizeInfoPage />,
+  "pallet-sizes": <PalletSizesPage />,
   "selection-card": <SelectionCardPage />,
   "summary-action": <SummaryActionPage />,
+  "summary-footer-action-panel": <SummaryFooterActionPanelPage />,
+  "summary-footer-price": <SummaryFooterPricePage />,
   "summary-header": <SummaryHeaderPage />,
   switch: <SwitchPage />,
   tag: <TagPage />,

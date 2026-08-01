@@ -1,0 +1,165 @@
+.pw-footer-navigation {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pw-footer-navigation__accent {
+  height: 6px;
+  width: 100%;
+  background: var(--brand-green-400, #74c043);
+}
+
+.pw-footer-navigation__body {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 64px var(--spacing-section-sm, 32px) var(--spacing-32, 128px);
+  background: var(--brand-blue-800, #063875);
+  border: 16px solid var(--brand-blue-800, #003774);
+  color: var(--text-color-text-inverse-primary-default, #fff);
+}
+
+.pw-footer-navigation--mobile .pw-footer-navigation__body {
+  padding-top: var(--spacing-section-sm, 32px);
+  padding-bottom: var(--spacing-section-lg, 120px);
+}
+
+.pw-footer-navigation__grid {
+  display: grid;
+  gap: 48px 40px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.pw-footer-navigation--desktop .pw-footer-navigation__grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  min-height: 332px;
+}
+
+.pw-footer-navigation--mobile .pw-footer-navigation__grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.pw-footer-navigation--desktop .pw-footer-navigation__cell--brand {
+  grid-column: span 2;
+}
+
+.pw-footer-navigation--desktop .pw-footer-navigation__cell--about {
+  grid-column: 4;
+}
+
+.pw-footer-navigation--desktop .pw-footer-navigation__cell--help {
+  grid-column: 5;
+}
+
+.pw-footer-navigation--desktop .pw-footer-navigation__cell--policies {
+  grid-column: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+}
+
+.pw-footer-navigation__brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6, 24px);
+}
+
+.pw-footer-navigation__logo {
+  display: block;
+  width: 225px;
+  height: 84.564px;
+  object-fit: contain;
+}
+
+.pw-footer-navigation__tagline {
+  margin: 0;
+  font-family: var(--font-polysans);
+  font-size: var(--typography-body-font-size, 16px);
+  line-height: var(--typography-body-line-height, 24px);
+  font-weight: var(--font-weight-semibold, 600);
+}
+
+.pw-footer-navigation__address {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-style: normal;
+  font-family: var(--font-polysans);
+  font-size: var(--typography-body-font-size, 16px);
+  line-height: var(--typography-body-line-height, 24px);
+  font-weight: var(--font-weight-neutral, 400);
+}
+
+.pw-footer-navigation__email {
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--font-polysans);
+  font-size: var(--typography-body-font-size, 16px);
+  line-height: var(--typography-body-line-height, 24px);
+  font-weight: var(--font-weight-neutral, 400);
+}
+
+.pw-footer-navigation__email:hover {
+  text-decoration: underline;
+}
+
+.pw-footer-navigation__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6, 24px);
+}
+
+.pw-footer-navigation__cell--nav .pw-footer-navigation__section + .pw-footer-navigation__section,
+.pw-footer-navigation__cell--about .pw-footer-navigation__section + .pw-footer-navigation__section {
+  margin-top: var(--spacing-8, 32px);
+}
+
+.pw-footer-navigation__heading {
+  margin: 0;
+  font-family: var(--font-polysans);
+  font-size: var(--typography-body-strong-font-size, 28px);
+  line-height: var(--typography-body-strong-line-height, 32px);
+  font-weight: var(--font-weight-bold, 700);
+}
+
+.pw-footer-navigation__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6, 24px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pw-footer-navigation__link {
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--font-polysans);
+  font-size: var(--typography-body-font-size, 16px);
+  line-height: var(--typography-body-line-height, 24px);
+  font-weight: var(--font-weight-neutral, 400);
+}
+
+.pw-footer-navigation__link:hover {
+  text-decoration: underline;
+}
+
+.pw-footer-navigation__copyright {
+  display: flex;
+  gap: var(--spacing-comp-x-xs, 4px);
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  color: var(--text-color-text-inverse-secondary-default, #cbd5e1);
+  font-family: var(--font-polysans);
+  font-size: var(--typography-caption-font-size, 12px);
+  line-height: var(--typography-caption-line-height, 12px);
+  font-weight: var(--font-weight-slim, 300);
+}
+
+.pw-footer-navigation--mobile .pw-footer-navigation__copyright {
+  margin-top: var(--spacing-6, 24px);
+}
