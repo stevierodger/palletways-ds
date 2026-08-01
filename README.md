@@ -9,7 +9,7 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 ### What it does
 
 - Documents foundations: color, typography (incl. font weights), spacing (base, component, section), radius, shadows, breakpoints
-- Documents components: ActionAdd, Badge, Breadcrumbs, Button, CalendarDate, CardNumberBadge, Checkbox, Chip, Counter, DateCard, Input, PalletSizeInfo, SelectionCard, Switch, Tag, Toggle, Tracker, Trustpilot
+- Documents components: ActionAdd, Badge, Breadcrumbs, Button, CalendarDate, CardNumberBadge, Checkbox, Chip, Counter, DateCard, HeaderNavigation, Input, LogoWordmark, NavMenuItems, PalletSizeInfo, SelectionCard, SummaryAction, SummaryHeader, Switch, Tag, Toggle, Tracker, Trustpilot
 - Uses real token values extracted from Figma MCP (`get_design_context` on component nodes)
 - Hash-based routing — share links like `/#/colors` or `/#/button`
 
@@ -28,7 +28,7 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 | `public/fonts/` | Drop licensed font files here (see README) |
 | `src/tokens/index.ts` | JS/TS token exports |
 | `src/components/Button/` | Primary / secondary / ghost button + Code Connect templates (`button-*.figma.ts`) |
-| `src/components/Icon/` | Arrow icons from Figma (SVG assets + React + nestable Code Connect) |
+| `src/components/Icon/` | Arrow, Edit, Menu, and User icons from Figma (SVG assets + React + nestable Code Connect) |
 | `figma.config.json` | Code Connect include/label/parser config |
 | `src/components/Input/` | Text field with label + error; Code Connect (`input-field`, `field`) |
 | `src/components/Checkbox/` | Labelled checkbox; Code Connect (`input.check-field`, `checkbox`) |
@@ -45,6 +45,11 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 | `src/components/DateCard/` | Collection date picker card; Code Connect (`date-card`) |
 | `src/components/SelectionCard/` | Economy/premium option card; Code Connect (`selection-cards`) |
 | `src/components/PalletSizeInfo/` | Dimension/value row; Code Connect (`info.pallet-size`) |
+| `src/components/Logo/` | Wordmark logo; Code Connect (`logo-wordmark`) |
+| `src/components/SummaryAction/` | Edit / order-again summary action; Code Connect (`summary-action`) |
+| `src/components/SummaryHeader/` | Order summary header; Code Connect (`summary-header`) |
+| `src/components/NavMenu/` | Primary nav items; Code Connect (`nav.menu-items`) |
+| `src/components/HeaderNavigation/` | Site header bar; Code Connect (`header-navigation`) |
 | `src/components/Tag/` | Semantic tag chips; Code Connect via Figma `label` |
 | `src/components/Tracker/` | Quote funnel step indicator; Code Connect (`tracker`) |
 | `src/App.tsx` | Renders design system site |
@@ -89,6 +94,8 @@ Parserless templates map the nine published Figma sets (`button-{primary|seconda
 Ten Figma `Arrow /*` components → React + SVG in `src/components/Icon/`:
 
 `ChevronLeft`, `ChevronRight`, `CaretDown`, `CaretUp`, `CaretCircleRight`, `ArrowCircleDown`, `ArrowCircleUp`, `ArrowCircleLeft`, `ArrowCircleRight`, `ArrowsReload`
+
+Edit / Menu / User icons: `EditPencil`, `Hamburger`, `User` — inline paths with `currentColor`, nestable Code Connect templates.
 
 Exported as clean 24×24 SVGs via Figma Plugin API (`exportAsync`), using `currentColor`. Code Connect templates are `nestable: true` so they render inside Button icon slots.
 
@@ -144,6 +151,18 @@ CalendarDate tones: `default` / `empty` / `today` / `collection` (green, left-ro
 | `info.pallet-size` (`2007:4430`) | `PalletSizeInfo` | `src/components/PalletSizeInfo/pallet-size-info.figma.ts` |
 
 DateCard composes `CalendarDate` + chevrons. SelectionCard reuses `Button` + arrow icons; premium uses a subtle gradient background.
+
+#### Logo / Summary / Navigation
+
+| Figma | Code | Template |
+|-------|------|----------|
+| `logo-wordmark` (`194:883`) | `LogoWordmark` | `src/components/Logo/logo-wordmark.figma.ts` |
+| `summary-action` (`2283:10519`) | `SummaryAction` | `src/components/SummaryAction/summary-action.figma.ts` |
+| `summary-header` (`2283:10525`) | `SummaryHeader` | `src/components/SummaryHeader/summary-header.figma.ts` |
+| `nav.menu-items` (`288:1034`) | `NavMenuItems` | `src/components/NavMenu/nav-menu-items.figma.ts` |
+| `header-navigation` (`194:2378`) | `HeaderNavigation` | `src/components/HeaderNavigation/header-navigation.figma.ts` |
+
+HeaderNavigation composes `LogoWordmark` + `NavMenuItems`. SummaryHeader composes `SummaryAction`. NavMenuItems uses `Button`, `CaretDown`, `ChevronRight`, `Hamburger`, `User`, and UK flag asset.
 
 #### App token layer (`tokens.css`)
 

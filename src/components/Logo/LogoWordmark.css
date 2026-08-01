@@ -1,0 +1,14 @@
+.pw-logo-wordmark {
+  display: block;
+  flex-shrink: 0;
+}
+
+.pw-logo-wordmark--large {
+  width: 134px;
+  height: 50px;
+}
+
+.pw-logo-wordmark--small {
+  width: 86px;
+  height: 32px;
+}

@@ -1,0 +1,17 @@
+.pw-header-navigation {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: var(--white, #ffffff);
+  border-bottom: 2px solid var(--brand-green-800, #1f4400);
+  padding: var(--spacing-4, 16px) var(--spacing-6, 24px);
+}
+
+.pw-header-navigation__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  min-height: 60px;
+}

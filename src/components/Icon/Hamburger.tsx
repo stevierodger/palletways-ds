@@ -1,0 +1,36 @@
+import type { SVGProps } from "react";
+import "./Icon.css";
+
+export type HamburgerProps = SVGProps<SVGSVGElement> & {
+  /** Pixel size (width & height). Defaults to 24 to match Figma. */
+  size?: number | string;
+  title?: string;
+};
+
+/** Figma: Menu / Hamburger_MD */
+export function Hamburger({
+  size = 24,
+  title,
+  className = "",
+  ...rest
+}: HamburgerProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={`pw-icon pw-icon--hamburger ${className}`.trim()}
+      role={title ? "img" : "presentation"}
+      aria-hidden={title ? undefined : true}
+      {...rest}
+    >
+      {title ? <title>{title}</title> : null}
+      <path
+        d="M19 18H5C4.4478 18 4 17.5527 4 17C4 16.4473 4.4478 16 5 16H19C19.5522 16 20 16.4473 20 17C20 17.5527 19.5522 18 19 18ZM19 13H5C4.4478 13 4 12.5527 4 12C4 11.4473 4.4478 11 5 11H19C19.5522 11 20 11.4473 20 12C20 12.5527 19.5522 13 19 13ZM19 8H5C4.4478 8 4 7.5527 4 7C4 6.4473 4.4478 6 5 6H19C19.5522 6 20 6.4473 20 7C20 7.5527 19.5522 8 19 8Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}

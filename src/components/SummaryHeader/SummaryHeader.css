@@ -1,0 +1,16 @@
+.pw-summary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-4, 16px);
+  width: 100%;
+}
+
+.pw-summary-header__title {
+  margin: 0;
+  color: var(--text-color-text-body-secondary-default, #44536a);
+  font-family: var(--font-polysans);
+  font-size: var(--typography-body-font-size, 16px);
+  line-height: var(--typography-body-line-height, 24px);
+  font-weight: var(--font-weight-semibold, 600);
+}

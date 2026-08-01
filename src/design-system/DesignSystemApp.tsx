@@ -18,9 +18,14 @@ import { CheckboxPage } from "./pages/components/CheckboxPage";
 import { ChipPage } from "./pages/components/ChipPage";
 import { CounterPage } from "./pages/components/CounterPage";
 import { DateCardPage } from "./pages/components/DateCardPage";
+import { HeaderNavigationPage } from "./pages/components/HeaderNavigationPage";
 import { InputPage } from "./pages/components/InputPage";
+import { LogoWordmarkPage } from "./pages/components/LogoWordmarkPage";
+import { NavMenuItemsPage } from "./pages/components/NavMenuItemsPage";
 import { PalletSizeInfoPage } from "./pages/components/PalletSizeInfoPage";
 import { SelectionCardPage } from "./pages/components/SelectionCardPage";
+import { SummaryActionPage } from "./pages/components/SummaryActionPage";
+import { SummaryHeaderPage } from "./pages/components/SummaryHeaderPage";
 import { SwitchPage } from "./pages/components/SwitchPage";
 import { TagPage } from "./pages/components/TagPage";
 import { TogglePage } from "./pages/components/TogglePage";
@@ -56,9 +61,14 @@ const NAV: NavItem[] = [
       { id: "chip", label: "Chip" },
       { id: "counter", label: "Counter" },
       { id: "date-card", label: "DateCard" },
+      { id: "header-navigation", label: "HeaderNavigation" },
       { id: "input", label: "Input" },
+      { id: "logo", label: "LogoWordmark" },
+      { id: "nav-menu", label: "NavMenuItems" },
       { id: "pallet-size-info", label: "PalletSizeInfo" },
       { id: "selection-card", label: "SelectionCard" },
+      { id: "summary-action", label: "SummaryAction" },
+      { id: "summary-header", label: "SummaryHeader" },
       { id: "switch", label: "Switch" },
       { id: "tag", label: "Tag" },
       { id: "toggle", label: "Toggle" },
@@ -86,9 +96,14 @@ const PAGES: Record<string, ReactNode> = {
   chip: <ChipPage />,
   counter: <CounterPage />,
   "date-card": <DateCardPage />,
+  "header-navigation": <HeaderNavigationPage />,
   input: <InputPage />,
+  logo: <LogoWordmarkPage />,
+  "nav-menu": <NavMenuItemsPage />,
   "pallet-size-info": <PalletSizeInfoPage />,
   "selection-card": <SelectionCardPage />,
+  "summary-action": <SummaryActionPage />,
+  "summary-header": <SummaryHeaderPage />,
   switch: <SwitchPage />,
   tag: <TagPage />,
   toggle: <TogglePage />,

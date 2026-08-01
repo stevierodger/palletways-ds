@@ -1,0 +1,30 @@
+.pw-summary-action {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-comp-x-xs, 4px);
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--text-color-text-body-primary-default, #0f172a);
+  font-family: var(--font-polysans);
+  font-size: var(--typography-caption-font-size, 12px);
+  line-height: var(--typography-caption-line-height, 12px);
+  font-weight: var(--font-weight-slim, 300);
+  white-space: nowrap;
+}
+
+.pw-summary-action:hover {
+  opacity: 0.85;
+}
+
+.pw-summary-action:focus-visible {
+  outline: 2px solid var(--brand-blue-700, #225595);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.pw-summary-action__icon {
+  flex-shrink: 0;
+}
