@@ -1,0 +1,80 @@
+/**
+ * Motion utilities — text enter on load.
+ * Tokens: `src/styles/figma-variables.css` (`--motion-text-enter-*`, `--motion-easing-standard`)
+ *
+ * - `.pw-motion-1` — Heading 1 enter (fade + rise)
+ * - `.pw-motion-2` — Heading 2 enter (slightly shorter / softer)
+ */
+
+@keyframes pw-motion-text-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, var(--pw-motion-enter-y, 40px), 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.pw-motion-1 {
+  --pw-motion-enter-y: var(--motion-text-enter-heading-translate-y, 40px);
+  animation-name: pw-motion-text-enter;
+  animation-duration: var(--motion-text-enter-heading-duration, 0.6s);
+  animation-timing-function: var(--motion-easing-standard, cubic-bezier(0.4, 1, 0, 1));
+  animation-fill-mode: both;
+  animation-delay: 0s;
+}
+
+.pw-motion-2 {
+  --pw-motion-enter-y: var(--motion-text-enter-subheading-translate-y, 24px);
+  animation-name: pw-motion-text-enter;
+  animation-duration: var(--motion-text-enter-subheading-duration, 0.45s);
+  animation-timing-function: var(--motion-easing-standard, cubic-bezier(0.4, 1, 0, 1));
+  animation-fill-mode: both;
+  /* Follow H1: first H2 starts after heading stagger */
+  animation-delay: var(--motion-text-enter-heading-stagger, 0.12s);
+}
+
+/* Stagger successive H2s within a page content stack */
+.doc-page__content > .doc-section:nth-of-type(1) .pw-motion-2 {
+  animation-delay: calc(var(--motion-text-enter-heading-stagger, 0.12s) + 0 * var(--motion-text-enter-subheading-stagger, 0.08s));
+}
+
+.doc-page__content > .doc-section:nth-of-type(2) .pw-motion-2 {
+  animation-delay: calc(var(--motion-text-enter-heading-stagger, 0.12s) + 1 * var(--motion-text-enter-subheading-stagger, 0.08s));
+}
+
+.doc-page__content > .doc-section:nth-of-type(3) .pw-motion-2 {
+  animation-delay: calc(var(--motion-text-enter-heading-stagger, 0.12s) + 2 * var(--motion-text-enter-subheading-stagger, 0.08s));
+}
+
+.doc-page__content > .doc-section:nth-of-type(4) .pw-motion-2 {
+  animation-delay: calc(var(--motion-text-enter-heading-stagger, 0.12s) + 3 * var(--motion-text-enter-subheading-stagger, 0.08s));
+}
+
+.doc-page__content > .doc-section:nth-of-type(5) .pw-motion-2 {
+  animation-delay: calc(var(--motion-text-enter-heading-stagger, 0.12s) + 4 * var(--motion-text-enter-subheading-stagger, 0.08s));
+}
+
+.doc-page__content > .doc-section:nth-of-type(6) .pw-motion-2 {
+  animation-delay: calc(var(--motion-text-enter-heading-stagger, 0.12s) + 5 * var(--motion-text-enter-subheading-stagger, 0.08s));
+}
+
+.doc-page__content > .doc-section:nth-of-type(7) .pw-motion-2 {
+  animation-delay: calc(var(--motion-text-enter-heading-stagger, 0.12s) + 6 * var(--motion-text-enter-subheading-stagger, 0.08s));
+}
+
+.doc-page__content > .doc-section:nth-of-type(8) .pw-motion-2 {
+  animation-delay: calc(var(--motion-text-enter-heading-stagger, 0.12s) + 7 * var(--motion-text-enter-subheading-stagger, 0.08s));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pw-motion-1,
+  .pw-motion-2 {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

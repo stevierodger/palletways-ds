@@ -4,6 +4,7 @@
 @import "./styles/fonts.css";
 @import "./styles/tokens.css";
 @import "./styles/figma-variables.css";
+@import "./styles/motion.css";
 
 *,
 *::before,

@@ -9,7 +9,7 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 ### What it does
 
 - Documents foundations: color, typography (incl. font weights), spacing (base, component, section), radius, shadows, breakpoints
-- Documents components: AcceptedCards, ActionAdd, Badge, Breadcrumbs, Button, CalendarDate, Card, CardNumberBadge, Chat, Checkbox, Chip, Counter, DateCard, FieldComponents, FieldTitle, FooterNavigation, HeaderNavigation, Image, Input, LogoWordmark, NavMenuItems, PalletSelection, PalletSelectionCard, PalletSizeInfo, PalletSizes, PaymentCard, SelectionCard, SummaryAction, SummaryCard, SummaryFooterActionPanel, SummaryFooterPrice, SummaryHeader, Switch, Tag, Toggle, Tracker, Trustpilot
+- Documents components: AcceptedCards, ActionAdd, AddressField, Badge, Breadcrumbs, Button, CalendarDate, Card, CardNumberBadge, Chat, Checkbox, Chip, Counter, DateCard, FieldComponents, FieldTitle, FooterNavigation, HeaderNavigation, Image, Input, LogoWordmark, NavMenuItems, PalletSelection, PalletSelectionCard, PalletSizeInfo, PalletSizes, PaymentCard, SelectionCard, SummaryAction, SummaryCard, SummaryFooterActionPanel, SummaryFooterPrice, SummaryHeader, Switch, Tag, Toggle, Tracker, Trustpilot
 - Uses real token values extracted from Figma MCP (`get_design_context` on component nodes)
 - Hash-based routing — share links like `/#/colors` or `/#/button`
 
@@ -24,6 +24,7 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 | `src/design-system/pages/` | Foundation + component documentation pages |
 | `src/styles/tokens.css` | App CSS custom properties (colors, type, spacing) |
 | `src/styles/figma-variables.css` | Figma variable catalogue using each variable’s WEB code syntax (Code Connect bridge) |
+| `src/styles/motion.css` | On-load text enter: `pw-motion-1` (heading) / `pw-motion-2` (subheading); used on design-system H1/H2 |
 | `src/styles/fonts.css` | PolySans Trial `@font-face` declarations |
 | `public/fonts/` | Drop licensed font files here (see README) |
 | `src/tokens/index.ts` | JS/TS token exports |
@@ -31,6 +32,7 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 | `src/components/Icon/` | Arrow, Edit, Menu, and User icons from Figma (SVG assets + React + nestable Code Connect) |
 | `figma.config.json` | Code Connect include/label/parser config |
 | `src/components/AcceptedCards/` | Accepted payment brand logos; Code Connect (`info.pallet-selection/Accepted cards`) |
+| `src/components/AddressField/` | Address lookup field exception (completed / freetext / lookup / clear / multi-line completed) |
 | `src/components/Card/` | Content + Trustpilot review cards; Code Connect (`card`) |
 | `src/components/Chat/` | Chat launcher + panel; Code Connect (`chat.component`) |
 | `src/components/FieldComponents/` | Atomic field pieces + Field input; Code Connect (`field-components`, `Field input`) |
@@ -83,7 +85,7 @@ Exported from Palletways v1.2 local variables (196 vars / 6 collections). Import
 | Typography | Desktop / Tablet / Mobile | `--typography-heading-1-font-size` |
 | Semantics | Mode 1 | `--button-color-bg-primary-default`, `--corner-radius-md` |
 | Type Scale | Desktop / Tablet / Mobile | `--heading-h1`, `--body-base` |
-| Motion | Default | Proposed `--motion-*` (no WEB syntax set in Figma yet) |
+| Motion | Default | `--motion-text-enter-*`, `--motion-easing-standard` → classes `pw-motion-1` (H1) / `pw-motion-2` (H2) on load (`src/styles/motion.css`) |
 
 **Deploy notes:** Keep WEB code syntax in Figma as the source of truth; re-export when variables change. Do not rename CSS vars without updating Figma WEB syntax (breaks Code Connect mapping).
 

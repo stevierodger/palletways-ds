@@ -10,6 +10,7 @@ import { ShadowsPage } from "./pages/ShadowsPage";
 import { BreakpointsPage } from "./pages/BreakpointsPage";
 import { AcceptedCardsPage } from "./pages/components/AcceptedCardsPage";
 import { ActionAddPage } from "./pages/components/ActionAddPage";
+import { AddressFieldPage } from "./pages/components/AddressFieldPage";
 import { BadgePage } from "./pages/components/BadgePage";
 import { BreadcrumbsPage } from "./pages/components/BreadcrumbsPage";
 import { ButtonPage } from "./pages/components/ButtonPage";
@@ -67,6 +68,7 @@ const NAV: NavItem[] = [
     children: [
       { id: "accepted-cards", label: "AcceptedCards" },
       { id: "action-add", label: "ActionAdd" },
+      { id: "address-field", label: "AddressField" },
       { id: "badge", label: "Badge" },
       { id: "breadcrumbs", label: "Breadcrumbs" },
       { id: "button", label: "Button" },
@@ -116,6 +118,7 @@ const PAGES: Record<string, ReactNode> = {
   breakpoints: <BreakpointsPage />,
   "accepted-cards": <AcceptedCardsPage />,
   "action-add": <ActionAddPage />,
+  "address-field": <AddressFieldPage />,
   badge: <BadgePage />,
   breadcrumbs: <BreadcrumbsPage />,
   button: <ButtonPage />,

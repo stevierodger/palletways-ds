@@ -11,7 +11,7 @@ export function DocPage({ title, description, children }: DocPageProps) {
   return (
     <article className="doc-page">
       <header className="doc-page__header">
-        <h1 className="doc-page__title">{title}</h1>
+        <h1 className="doc-page__title pw-motion-1">{title}</h1>
         {description && <p className="doc-page__description">{description}</p>}
         <div className="doc-page__accent" aria-hidden="true" />
       </header>
@@ -29,7 +29,7 @@ export function DocSection({
 }) {
   return (
     <section className="doc-section">
-      <h2 className="doc-section__title">{title}</h2>
+      <h2 className="doc-section__title pw-motion-2">{title}</h2>
       {children}
     </section>
   );

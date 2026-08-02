@@ -143,7 +143,7 @@ export function OverviewPage() {
             <tr>
               <td>Components</td>
               <td>
-                AcceptedCards, ActionAdd, Badge, Breadcrumbs, Button,
+                AcceptedCards, ActionAdd, AddressField, Badge, Breadcrumbs, Button,
                 CalendarDate, Card, CardNumberBadge, Chat, Checkbox, Chip,
                 Counter, DateCard, FieldComponents, FieldTitle,
                 FooterNavigation, HeaderNavigation, Image, Input, LogoWordmark,
