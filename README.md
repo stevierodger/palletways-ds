@@ -2,6 +2,17 @@
 
 Vite + React + TypeScript project for the **Palletways** design system and components, sourced from [Palletways v1.2 Figma](https://www.figma.com/design/o92QFaFLrva3a3JJ0YS5Qp/Palletways-v1.2?node-id=80-154).
 
+## Homepage (branch: `homepage-initial`)
+
+First assembly of Figma **landingpage-new** (`2221:7819`) for visual QA.
+
+| Route | View |
+|-------|------|
+| `/`, `/#/`, `/#/home` | Marketing homepage |
+| `/#/button`, `/#/colors`, … | Design system docs |
+
+See `src/pages/HomePage/README.md` for composition details, assets, and components reused.
+
 ## Design system website
 
 Interactive documentation site (Carbon / Wise inspired) with sidebar navigation, live component previews, token tables, and code examples.
@@ -68,7 +79,8 @@ Interactive documentation site (Carbon / Wise inspired) with sidebar navigation,
 | `src/components/SummaryFooterPrice/` | Summary price breakdown; Code Connect (`summary-footer/price`) |
 | `src/components/Tag/` | Semantic tag chips; Code Connect via Figma `label` |
 | `src/components/Tracker/` | Quote funnel step indicator; Code Connect (`tracker`) |
-| `src/App.tsx` | Renders design system site |
+| `src/App.tsx` | Homepage by default; design system when hash is a doc path |
+| `src/pages/HomePage/` | Marketing homepage (`landingpage-new` 2221:7819) |
 
 ### CSS / design tokens
 
